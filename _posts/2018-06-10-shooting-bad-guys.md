@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Shooting some baddies"
+title:  "Shooting bad guys"
 date:   2018-06-10 15:08:45 +0200
-categories: [electronics, reverse engineering]
+categories: [electronics, reverse engineering, playstation]
 ---
 Some of you might remember the good old days of the PlayStation 1 and 2.  
 More specifically, I'm talking about Time Crisis and the GUNCON, aka G-CON45 for us Europeans.  
@@ -33,7 +33,7 @@ We will be taking a look at the first one.
 
 The GUNCON, much like any other controller, gets plugged into the controller port of the PlayStation.  
 Additionally to that, you have to send the video signal to the GUNCON. This was done with an extra input at the GUNCON connector, see picture below:
-![GUNCON to PS1]({{ "/assets/2018-06-10-shooting-some-baddies/guncon_connection.jpg" }})  
+![GUNCON to PS1]({{ "/assets/2018-06-10-shooting-bad-guys/guncon_connection.jpg" }})  
 
 
 The way the GUNCON works is through a technique called [Cathode Ray Timing]( https://en.wikipedia.org/wiki/Light_gun#Cathode_ray_timing ).
@@ -42,9 +42,9 @@ To my understanding, every V-SYNC resets the Y-coordinate, every H-SYNC increase
 Then it’s just a matter of passing on those coordinates to the PlayStation and a bit of collision detection to determine if you hit a target or not.
 
 To further investigate the workings of the GUNCON, I reverse engineered the PCB inside of it.  
-![GUNCON to PS1]({{ "/assets/2018-06-10-shooting-some-baddies/G-CON45.png" }})
+![GUNCON to PS1]({{ "/assets/2018-06-10-shooting-bad-guys/G-CON45.png" }})
 
-For a better resolution, here's the [schematic in PDF]({{ "/assets/2018-06-10-shooting-some-baddies/G-CON45.pdf" }}).
+For a better resolution, here's the [schematic in PDF]({{ "/assets/2018-06-10-shooting-bad-guys/G-CON45.pdf" }}).
 
 The BA7071 chip (U2) is a [sync seperator IC]( http://www.alldatasheet.com/datasheet-pdf/pdf/36163/ROHM/BA7071.html ).
 
