@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "Shooting bad guys - part 2"
 date:   2018-06-14 13:00:00 +0200
@@ -91,6 +91,16 @@ This will help in understanding the GUNCON further and might also reveal some un
 
 The analog joystick will be our X:Y coordinate and the 3 pushbuttons will be our A, B and trigger buttons.
 
-*TODO : Schematic, code, ...*
+Here's a schematic I made for the GUNCON emulator:
+![GUNCON Emulator]({{ "/assets/2018-06-14-shooting-bad-guys-2/GUNCON Emulator.png" }})
 
+I'll be using a Microchip PIC 18F2455, because that's what I got on hand.  
+It's been a little while but I think you can increase the external oscillator, which is 20MHz, with the internal PLL up to 48MHz.
+That should give us plenty of time to work with.
+
+
+Update: It turns out the pick isn't fast enough for how fast the SPI communication is going.
+
+
+*TODO : PCB, code, ...*
 
