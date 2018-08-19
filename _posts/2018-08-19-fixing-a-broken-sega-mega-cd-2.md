@@ -30,7 +30,7 @@ Below are the steps I followed to get it up and running again.
 <br/>
 ### Rule 1: Thou shalt measure voltage:
 
-Unless like an idiot you blow up the fuse...
+Unless like an idiot (=me) you blow up the fuse...
 
 Looking at the schematic of the Mega-CD 2, the 10VDC external power supply gets converted to 5VDC with a NEC2405 linear voltage regulator.
 
@@ -46,7 +46,8 @@ I'm sure I can bridge the fuse with a wire. What can possibly go wrong? <br/>
 <b>Note:</b> Don't do this, I'm just too impatient to wait for a new fuse.
 
 So I did just that. I used the thinnest copper wire I had to bridge the fuse.<br/>
-I set my lab power supply to 10VDC with a small OCP.
+I set my lab power supply to 10VDC with a small OCP.<br/>
+I'm not really expecting this to blow up if there's a high current going through it.
 
 ![Sega Mega-CD 1 - Motherboard]({{ "/assets/2018-08-19-fixing-a-broken-sega-mega-cd-2/mega-cd-2_bridge.jpeg" }})
 
