@@ -36,7 +36,7 @@ Looking at the schematic of the Mega-CD 2, the 10VDC external power supply gets 
 
 ![Sega Mega-CD 2 - Voltage Reg Schematic]({{ "/assets/2018-08-19-fixing-a-broken-sega-mega-cd-2/mega-cd-2_voltage-reg.png" }})
 
-The schematic isn't that great, but the voltage regulation used in the Mega-CD 2 is identical to the one used in the Mega-CD 1., so I'll be using that.
+The schematic isn't that great, but the voltage regulation used in the Mega-CD 2 is identical to the one used in the Mega-CD 1, so I'll be using that.
 
 ![Sega Mega-CD 1 - Voltage Reg Schematic]({{ "/assets/2018-08-19-fixing-a-broken-sega-mega-cd-2/mega-cd-1_voltage-reg.png" }})
 
