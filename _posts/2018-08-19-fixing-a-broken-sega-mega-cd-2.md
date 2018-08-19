@@ -127,6 +127,20 @@ I cleaned everything with Kontakt 60 contact cleaner and q-tips, and it worked f
 
 ******************************
 <br/>
+### Testing the CD player:
+
+Until now I have tested the Mega-CD 2, without disc.<br/>
+I don't have a game, so for those of you who don't know, the Mega-CD 2 has a built-in music disk player.<br/>
+
+After putting everything back in the Mega-CD 2 case I tried playing a music disk.<br/>
+It worked!
+
+After getting the console to boot, it would have been all a waste of time if the CD player was broken. So I'm happy it works fine.
+
+The only issue I have is that my power supply can't provide enough current to drive the CD player continuesly.
+
+*****************************
+<br/>
 ### TODO:
 
 The Mega-CD 2 has a 3V rechargeable battery for the RAM.<br/>
