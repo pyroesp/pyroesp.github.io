@@ -4,7 +4,7 @@ title:  "Fixing a broken Sega Mega-CD 2"
 date:   2018-08-19 10:00:00 +0200
 categories: [electronics, repair, Sega]
 ---
-In December of 2016 I bought myself a broken Sega Mega-CD II, with the intention of fixing it and giving it to my brother as a gift.<br/>
+In December of 2016 I bought myself a broken Sega Mega-CD 2 for €36, with the intention of fixing it and giving it to my brother as a gift.<br/>
 The seller said he couldn't get it to boot.
 
 Now, when I got it, I didn't have the correct power supply and ended up blowing up the fuse on the motherboard.
