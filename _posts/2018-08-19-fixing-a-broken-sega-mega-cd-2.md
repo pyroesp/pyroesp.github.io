@@ -21,7 +21,8 @@ For some reason, this past Friday, I really wanted to try to fix it again.<br/>
 And so I got home and opened up the Mega-CD and started working on it.
 
 
-Full service manuals for different Sega consoles can be found here : http://www.sega-16.com/forum/showthread.php?23228-Sega-Service-manuals-16bit
+Full service manuals for different Sega consoles can be found here : <br/>
+[http://www.sega-16.com/forum/showthread.php?23228-Sega-Service-manuals-16bit](http://www.sega-16.com/forum/showthread.php?23228-Sega-Service-manuals-16bit)
 
 
 Below are the steps I followed to get it up and running again.
@@ -49,7 +50,7 @@ So I did just that. I used the thinnest copper wire I had to bridge the fuse.<br
 I set my lab power supply to 10VDC with a small OCP.<br/>
 I'm not really expecting this to blow up if there's a high current going through it.
 
-![Sega Mega-CD 1 - Motherboard]({{ "/assets/2018-08-19-fixing-a-broken-sega-mega-cd-2/mega-cd-2_bridge.jpeg" }})
+![Sega Mega-CD 1 - Bridge]({{ "/assets/2018-08-19-fixing-a-broken-sega-mega-cd-2/mega-cd-2_bridge.jpeg" }})
 
 Before applying power I disconnected the CD player from the main motherboard. I didn't want it to interfere with the measurments.
 
@@ -115,12 +116,12 @@ I had a black screen until now, so the white flash was a surprise.
 
 I turned it back on, and there it was, in all it's glory:
 
-![Sega Mega-CD 1 - Motherboard]({{ "/assets/2018-08-19-fixing-a-broken-sega-mega-cd-2/mega-cd-2_boot-ok.jpeg" }})
+<p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/mwROd91qzWs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
 
 What had happened is that by plugging the MD-2 on and off the Mega-CD 2, the connector on both consoles broke through a layer of dust and oxidation.<br/>
-This was something I didn't think about as the MD-2 was in working condition and still had the protective cap over the PCB contacts for the Mega-CD 2.
+This was something I didn't think about as the MD-2 was in working condition and still had the protective cap over the PCB contacts.The Mega-CD 2 connector though, it's always open so dust can easily get in there.
 
-It didn't even cross my mind to check the connectors to be honest.
+It didn't cross my mind to check the connectors to be honest.
 
 This thought me an important lesson and I'm definitely going to be looking at this in the future if I ever attempt a repair again.
 
@@ -138,7 +139,7 @@ It worked!
 
 After getting the console to boot, it would have been all a waste of time if the CD player was broken. So I'm happy it works fine.
 
-The only issue I have is that my power supply can't provide enough current to drive the CD player continuesly.
+The only issue I have is that my power supply can't provide enough current to drive the CD player continuesly and because of this, the Mega-CD 2 locks up from time to time.
 
 *****************************
 <br/>
