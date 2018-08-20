@@ -47,7 +47,7 @@ I'm sure I can bridge the fuse with a wire. What can possibly go wrong? <br/>
 <b>Note:</b> Don't do this, I'm just too impatient to wait for a new fuse.
 
 So I did just that. I used the thinnest copper wire I had to bridge the fuse.<br/>
-I set my lab power supply to 10VDC with a small OCP.<br/>
+I set my lab power supply to 10VDC with a small overcurrent protection (OCP).<br/>
 I'm not really expecting this to blow up if there's a high current going through it.
 
 ![Sega Mega-CD 1 - Bridge]({{ "/assets/2018-08-19-fixing-a-broken-sega-mega-cd-2/mega-cd-2_bridge.jpeg" }})
