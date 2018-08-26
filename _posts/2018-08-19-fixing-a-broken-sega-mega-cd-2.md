@@ -4,12 +4,12 @@ title:  "Fixing a broken Sega Mega-CD 2"
 date:   2018-08-19 10:00:00 +0200
 categories: [electronics, repair, Sega]
 ---
-In December of 2016 I bought myself a broken Sega Mega-CD 2 for €36, with the intention of fixing it and giving it to my brother as a gift.<br/>
+In December of 2016 I bought myself a broken Sega Mega-CD 2 for $50 shipped, with the intention of fixing it and giving it to my brother as a gift.<br/>
 The seller said he couldn't get it to boot.
 
 Now, when I got it, I didn't have the correct power supply and ended up blowing up the fuse on the motherboard.
 
-Who knew Sega would use a positive barrel negative center barrel jack power supply when the Sega Mega Drive 2 (MD-2) uses a negative barrel positive center power supply!<br/>
+Who knew Sega would use a center pin negative barrel jack power supply when the Sega Mega Drive 2 (MD-2) uses a center pin positive power supply!<br/>
 Who at Sega thought this was a good idea !?
 
 
@@ -42,17 +42,17 @@ The schematic isn't that great, but the voltage regulation used in the Mega-CD 2
 ![Sega Mega-CD 1 - Voltage Reg Schematic]({{ "/assets/2018-08-19-fixing-a-broken-sega-mega-cd-2/mega-cd-1_voltage-reg.png" }})
 
 I measured the resistors and transistors to see if they were still ok, and they looked fine.<br/>
-Because of that, I wanted to send power to it with my lab power supply and it's overcurrent protection.<br/>
+Because of that, I wanted to send power to it with my lab power supply and it's overcurrent protection (OCP).<br/>
 I'm sure I can bridge the fuse with a wire. What can possibly go wrong? <br/>
 <b>Note:</b> Don't do this, I'm just too impatient to wait for a new fuse.
 
 So I did just that. I used the thinnest copper wire I had to bridge the fuse.<br/>
-I set my lab power supply to 10VDC with a small overcurrent protection (OCP).<br/>
+I set my lab power supply to 10VDC with a small OCP.<br/>
 I'm not really expecting this to blow up if there's a high current going through it.
 
 ![Sega Mega-CD 1 - Bridge]({{ "/assets/2018-08-19-fixing-a-broken-sega-mega-cd-2/mega-cd-2_bridge.jpeg" }})
 
-Before applying power I disconnected the CD player from the main motherboard. I didn't want it to interfere with the measurments.
+Before applying power I disconnected the CD player from the main motherboard. I didn't want it to interfere with the measurements.
 
 The voltage was stable and the current drawn was ok, but no voltage on the NEC2405.<br/>
 Looking at the schematic, the pass transistor TR3 (Q301), only lets current through when TR4 (Q303) is on.
@@ -65,7 +65,7 @@ At this point I didn't want to connect the MD-2 to the Mega-CD so I soldered a w
 The lab power supply went into OCP and I quickly turned it off.
 
 At this point I desoldered and tested the pass transistor with one of those cheap component testers from eBay, and it was ok.<br/>
-Next thing I desoldered was the NEC2405 and tested it out of circuit, 6.5VDC for a 5V regulator... Not great.<br/>
+Next I desoldered the NEC2405 and tested it out of circuit, 6.5VDC for a 5V regulator... Not great.<br/>
 I applied power to the Mega-CD 2 again, with the MD-2 turn on signal and the power supply stayed at 10V.<br/>
 
 Fortunately enough I have a few 7805, which are pin compatible with the NEC2405, and soldered it in place.<br/>
@@ -79,7 +79,7 @@ I measured the voltage on most of the ICs, just to be sure everything got 5V, an
 
 Most if not every IC on the Mega-CD 2 had previously been reflowed. The board looked like shit with old flux everywhere.
 
-![Sega Mega-CD 1 - Motherboard]({{ "/assets/2018-08-19-fixing-a-broken-sega-mega-cd-2/mega-cd-2_motherboard.jpeg" }})
+![Sega Mega-CD 2 - Motherboard]({{ "/assets/2018-08-19-fixing-a-broken-sega-mega-cd-2/mega-cd-2_motherboard.jpeg" }})
 
 I cleaned it as much as I could with Kontact IPA Isopropanol, but some of it just didn't want to come off.
 
