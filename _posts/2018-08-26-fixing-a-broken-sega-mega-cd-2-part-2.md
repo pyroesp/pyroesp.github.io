@@ -68,6 +68,6 @@ I can get it to load by opening and closing the port of the CD drive. That reset
 
 I've tried another game and this one doesn't want to load the levels unless I open and close the CD port.
 
-Anyone know why this happens and/or knows how to fix this ?
+Anyone knows why this happens and/or knows how to fix this ?
 
 ******************************
