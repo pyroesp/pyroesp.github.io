@@ -12,5 +12,7 @@ I'm a C programmer so that's what I'll be programming in, but depending on the p
 The microcontrollers I most often use are Microchip PIC, but I have experience with: AVR, TI, STM, ...  
 Hopefully I'll get around making a few interesting posts which will use my Altera CPLD or Xilinx FPGA dev boards.
 
-This blog is intended for people who already know electronics and programming. I'm not going to explain every little detail from the ground up.  
-I do welcome everyone who wants to learn and if you don't understand something, feel free to send me an e-mail or PM.
+I'm open to any critique, suggestions or questions you might have.
+Follow me on twitter @pyroesp.
+
+I hope you'll enjoy the content.
