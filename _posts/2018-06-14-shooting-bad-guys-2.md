@@ -99,8 +99,4 @@ It's been a little while but I think you can increase the external oscillator, w
 That should give us plenty of time to work with.
 
 
-<b>Update:</b> It turns out the pick isn't fast enough for how fast the SPI communication is going.
-
-
-*TODO : PCB, code, ...*
-
+<b>Update:</b> It turns out the PIC isn't fast enough for how fast the SPI communication is going and generate the ACK signal at the same time. I'll have to try something else.
