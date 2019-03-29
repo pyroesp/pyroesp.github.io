@@ -29,6 +29,7 @@ The GBDSO was a kit sold by Elektor, but because this project is old, they don't
 I'm interested in having one of these, so I thought: Why don't I make one?  
 
 ***************************  
+<br/>
 
 ### Research
 
@@ -101,7 +102,7 @@ Jumper 1 switches between 5V or 13V going to VPP of the EPROM. While programming
 Jumper 2 isolates the whole board, except the EPROM, from the 6.5V.  
 ![JP2]({{ "https://github.com/pyroesp/GBDSO/raw/master/pictures/programming-JP2.png" }})   
 
-After you're done programming, close JP2 and change JP1 so that the middle and top pad are connected.
+After you're done programming, bridge JP2 and change JP1 so that the middle and top pad are connected.
 
 ***************************  
 <br/>
