@@ -131,7 +131,7 @@ When powering the GBDSO up into a Game Boy, I had this Nintendo logo no matter w
 
 After a bit of back and forth with the guys on the gbdev discord and looking at the difference between a normal logo and the one I have, it came apparent that D7 is held low for some reason.  
 
-As you can see from the image below, those red pixels are missing if D7 is missing.  
+As you can see from the image below, those red pixels are missing if D7 is grounded.  
 
 ![Assembly 10]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/troubleshooting-2.png" }})  
 
