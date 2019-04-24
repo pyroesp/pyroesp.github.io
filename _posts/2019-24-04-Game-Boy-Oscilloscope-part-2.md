@@ -70,24 +70,24 @@ Unfortunately I didn't check the footprint of some of the ICs I'm using.
 The digital potentiometer DS1267 is in a wide SOIC16 package. I have a normal SOIC16 footprint.  
 To try and fix without having to make a new board, I bent the pins inwards:
 
-![Assembly 2]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly-(2).jpg" }})  
+![Assembly 2]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly- (2).jpg" }})  
 
-![Assembly 3]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly-(3).jpg" }}) 
+![Assembly 3]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly- (3).jpg" }}) 
 
 It looks like it's going to fit. I added some flux to help and here's the result :
 
-![Assembly 4]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly-(4).jpg" }})   
+![Assembly 4]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly- (4).jpg" }})   
 
-![Assembly 5]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly-(5).jpg" }})  
+![Assembly 5]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly- (5).jpg" }})  
 
 As you can see, the pin is bent inwards and soldered to the normal SOIC16 footrpint.  
 
-![Assembly 6]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly-(6).jpg" }})  
+![Assembly 6]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly- (6).jpg" }})  
 
-![Assembly 7]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly-(7).jpg" }})  
+![Assembly 7]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly- (7).jpg" }})  
 
-![Assembly 8]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly-(8).jpg" }})  
+![Assembly 8]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly- (8).jpg" }})  
 
-![Assembly 9]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly-(9).jpeg" }})  
+![Assembly 9]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly- (9).jpeg" }})  
 
-![Assembly 10]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly-(10).jpeg" }})  
+![Assembly 10]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly- (10).jpeg" }})  
