@@ -142,7 +142,7 @@ Due to the pin pitch being so small on a TSSOP I didn't see the shorts, but mana
 I only hope that I didn't break anything on the PCB because of the shorts I had...  
 
 I also found out that the digital potentiometer symbol in KiCad, had it's pin 12 and 13 swapped.  
-Unfortunately my board has already been done, so I have to somehow swap those two pins.
+Unfortunately my board was already done, so I have to somehow swap those two pins.
 I submitted an issue and fixed the symbol in a pull request to the official KiCad symbols github repo.
 
 The fix isn't pretty, but it should work:
