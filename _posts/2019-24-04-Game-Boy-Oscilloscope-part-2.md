@@ -62,32 +62,46 @@ Anyways, once I proved the GBDSO PCB wasn't a bomb, I got the board in the mail 
 
 Soldering the parts on the GBDSO was going fine. I started with discrete stuff: resistors, capacitors, ...  
 
-![Assembly 1]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly-(1).jpg" }})  
+![Assembly 1]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly (1).jpg" }})  
 
 Then I started adding the diodes, opamps and other stuff.  
 Unfortunately I didn't check the footprint of some of the ICs I'm using.  
 
 The digital potentiometer DS1267 is in a wide SOIC16 package. I have a normal SOIC16 footprint.  
-To try and fix without having to make a new board, I bent the pins inwards:
+To try and fix this without having to make a new board, I bent the pins inwards:
 
-![Assembly 2]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly- (2).jpg" }})  
+![Assembly 2]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly (2).jpg" }})  
 
-![Assembly 3]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly- (3).jpg" }}) 
+![Assembly 3]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly (3).jpg" }}) 
 
 It looks like it's going to fit. I added some flux to help and here's the result :
 
-![Assembly 4]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly- (4).jpg" }})   
+![Assembly 4]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly (4).jpg" }})   
 
-![Assembly 5]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly- (5).jpg" }})  
+![Assembly 5]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly (5).jpg" }})  
 
-As you can see, the pin is bent inwards and soldered to the normal SOIC16 footrpint.  
+As you can see, the pins are bent inwards and soldered to the normal SOIC16 footrpint.  
 
-![Assembly 6]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly- (6).jpg" }})  
+****************************
+<br/>
 
-![Assembly 7]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly- (7).jpg" }})  
+### Missing IC
 
-![Assembly 8]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly- (8).jpg" }})  
+Everything was soldered onto the board, except for the 74HC138 and the MAX114CAG.  
+Where did I put those? I can't find them anywhere.  
+I checked my digikey BOM list online and they weren't in there!  
+I had to order them from another supplier as digikey charges 18€ for shipping less than 50€.  
+That seemed like a lot for two ICs.  
 
-![Assembly 9]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly- (9).jpeg" }})  
+Once I got them I soldered the 74HC138 without issue, but then I messed up again.  
+The ADC is in a wide TSSOP24 package and I used a normal TSSOP24 footprint.
 
-![Assembly 10]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly- (10).jpeg" }})  
+![Assembly 6]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly (6).jpg" }})  
+
+![Assembly 7]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly (7).jpg" }})  
+
+![Assembly 8]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly (8).jpg" }})  
+
+![Assembly 9]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly (9).jpeg" }})  
+
+![Assembly 10]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly (10).jpeg" }})  
