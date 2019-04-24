@@ -74,8 +74,7 @@ This prompted me to make a small extension to the PCB which would convert the ca
 
 ![PCB v1]({{ "https://github.com/pyroesp/GBDSO/raw/master/pictures/pcb.png" }})  
 
-The second board arrived and here are a couple of pictures:
-
+The second board arrived and here are a couple of pictures:  
 
 ![PCB v1 front]({{ "https://github.com/pyroesp/GBDSO/raw/master/pictures/pcb-v1-front.jpg" }})  
 

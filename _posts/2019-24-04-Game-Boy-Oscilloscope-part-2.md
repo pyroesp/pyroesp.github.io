@@ -5,7 +5,7 @@ date:   2019-04-24 05:00:00 +0200
 categories: [electronics, PCB design, KiCad]
 ---
 
-Recap: 
+*Recap:* 
 In the November magazine of Elektor 2000, there's an article from Steve Willis who made a cartridge for the Game Boy named GBDSO.  
 This cartridge converted the Game Boy into a 2 channel oscilloscope.  
 
@@ -36,25 +36,58 @@ I'm interested in having one of these, so I thought: Why don't I make one?
 
 I've been in contact with Elektor, trying to get the binary file for the EPROM.  
 After a couple of weeks of "I've forwarded your question to the tech. department", they told me they had *one* EPROM left for the GBDSO.  
-They were willing to sell it to me for 10EUR, so of course I bought it!  
+They were willing to sell it to me for 10€, so of course I bought it!  
 
-I tried to read the EPROM with an Arduino, but something did't work as the file I read didn't work in an emulator.  
+I tried to read the EPROM with an Arduino, but something was wrong as the bin file I read didn't work in an emulator.  
 
 ***************************  
 <br/> 
 
 ### PCB v1 arrives  
 
-Oh, how I loathe customs. 1,5 week after the PCB was supposed to arrive I get a letter in the mail from Belgian customs telling me I need to provide proof of purchase for package X.  
+Oh, how I loathe customs. 1,5 week after the PCB was supposed to arrive I get a letter in the mail from our wonderfule Belgian customs telling me I need to provide proof of purchase for the package.  
 I ordered a few extra things from JLCPCB this time, because I thought the PCB was done:
 - Color red
 - Gold plated
 - ...  
 
-Total price comes around to 30$, which is more than the allowed 22EUR before import tax.  
+Total price comes around to 30$, which is more than the allowed 22EUR before import tax/customs checks.  
 
 Anyways, once I proved the GBDSO PCB wasn't a bomb, I got the board in the mail another 1,5 week later. Got to love our postal services.  
 
+***************************  
+<br/> 
 
-TODO
-...
+### Assembling the GBDSO  
+
+Soldering the parts on the GBDSO was going fine. I started with discrete stuff: resistors, capacitors, ...  
+
+![Assembly 1]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly-(1).jpg" }})  
+
+Then I started adding the diodes, opamps and other stuff.  
+Unfortunately I didn't check the footprint of some of the ICs I'm using.  
+
+The digital potentiometer DS1267 is in a wide SOIC16 package. I have a normal SOIC16 footprint.  
+To try and fix without having to make a new board, I bent the pins inwards:
+
+![Assembly 2]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly-(2).jpg" }})  
+
+![Assembly 3]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly-(3).jpg" }}) 
+
+It looks like it's going to fit. I added some flux to help and here's the result :
+
+![Assembly 4]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly-(4).jpg" }})   
+
+![Assembly 5]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly-(5).jpg" }})  
+
+As you can see, the pin is bent inwards and soldered to the normal SOIC16 footrpint.  
+
+![Assembly 6]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly-(6).jpg" }})  
+
+![Assembly 7]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly-(7).jpg" }})  
+
+![Assembly 8]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly-(8).jpg" }})  
+
+![Assembly 9]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly-(9).jpeg" }})  
+
+![Assembly 10]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly-(10).jpeg" }})  
