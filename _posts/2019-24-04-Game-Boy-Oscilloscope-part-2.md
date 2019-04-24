@@ -51,7 +51,7 @@ I ordered a few extra things from JLCPCB this time, because I thought the PCB wa
 - Gold plated
 - ...  
 
-Total price comes around to 30$, which is more than the allowed 22EUR before import tax/customs checks.  
+Total price comes around to 30$. If you buy something that's 22€ or more then customs can check your packages and you'll be charged an import tax...
 
 Anyways, once I proved the GBDSO PCB wasn't a bomb, I got the board in the mail another 1,5 week later. Got to love our postal services.  
 
