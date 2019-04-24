@@ -49,7 +49,8 @@ Oh, how I loathe customs. 1,5 week after the PCB was supposed to arrive I get a 
 I ordered a few extra things from JLCPCB this time, because I thought the PCB was done:
 - Color red
 - Gold plated
-- ...
+- ...  
+
 Total price comes around to 30$, which is more than the allowed 22EUR before import tax.  
 
 Anyways, once I proved the GBDSO PCB wasn't a bomb, I got the board in the mail another 1,5 week later. Got to love our postal services.  
