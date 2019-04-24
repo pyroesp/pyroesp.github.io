@@ -80,6 +80,8 @@ The second board arrived and here are a couple of pictures:
 
 ![PCB v1 back]({{ "https://github.com/pyroesp/GBDSO/raw/master/pictures/pcb-v1-back.jpg" }})  
 
+See part 2 for the assembly!  
+
 ***************************  
 <br/>
 

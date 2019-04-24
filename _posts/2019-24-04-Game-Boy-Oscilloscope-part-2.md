@@ -45,7 +45,7 @@ I tried to read the EPROM with an Arduino, but something was wrong as the bin fi
 
 ### PCB v1 arrives  
 
-Oh, how I loathe customs. 1,5 week after the PCB was supposed to arrive I get a letter in the mail from our wonderfule Belgian customs telling me I need to provide proof of purchase for the package.  
+Oh, how I loathe customs. 1,5 week after the PCB was supposed to arrive I get a letter in the mail from our wonderful Belgian customs telling me I need to provide proof of purchase for the package.  
 I ordered a few extra things from JLCPCB this time, because I thought the PCB was done:
 - Color red
 - Gold plated
@@ -74,7 +74,8 @@ To try and fix this without having to make a new board, I bent the pins inwards:
 
 ![Assembly 3]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly (3).jpg" }}) 
 
-It looks like it's going to fit. I added some flux to help and here's the result :
+It looks like it's going to fit. I added some flux to help and then reflow soldered it with my hot air station.  
+Here's the result :
 
 ![Assembly 4]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly (4).jpg" }})   
 
@@ -100,8 +101,68 @@ The ADC is in a wide TSSOP24 package and I used a normal TSSOP24 footprint.
 
 ![Assembly 7]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly (7).jpg" }})  
 
-![Assembly 8]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly (8).jpg" }})  
+Again, I had to bend the pins inwards to make it fit the footprint. Soldering this with the soldering iron was impossible, so I had to reflow solder it again.  
+
+********************************
+<br/>
+
+### Assembly done
+
+The board is done. I found a 3$ delivered Game Boy game and used it's shell for the GBDSO.  
+I was a bit rough cutting the shell, I should have used the dremel for this.
+
+![Assembly 8]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly (8).jpeg" }})  
+
+That small hole is too low. I checked my technical drawing of the cart and I messed up the distance from top to center of the hole... 
+I broke off the pin that should go in that hole and fixed the PCB in KiCad and the tech. drawing, but now the PCB can move a bit so I hope it will still make good contact in the Game Boy.  
 
 ![Assembly 9]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly (9).jpeg" }})  
 
-![Assembly 10]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly (10).jpeg" }})  
+Unfortunately once I plugged it in, it didn't work.  
+
+*********************************
+<br/>
+
+### Troubleshooting, part 1
+
+When powering the GBDSO up into a Game Boy, I had this Nintendo logo no matter which Game Boy I used:  
+
+![Assembly 10]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/troubleshooting-1.png" }})  
+
+After a bit of back and forth with the guys on the gbdev discord and looking at the difference between a normal logo and the one I have, it came apparent that D7 is held low for some reason.  
+
+As you can see from the image below, those red pixels are missing if D7 is missing.  
+
+![Assembly 10]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/troubleshooting-2.png" }})  
+
+I'm thinking I must have damaged the EPROM when reflow soldering it, as it was difficult to solder and wouldn't get into place.  
+But after some probing I found I had D7 shorted to GND on the ADC.  
+Due to the pin pitch being so small on a TSSOP I didn't see the shorts, but managed to fix them with desoldering braid.  
+
+I only hope that I didn't break anything on the PCB because of the shorts I had...  
+
+I also found out that the digital potentiometer symbol in KiCad, had it's pin 12 and 13 swapped.  
+Unfortunately my board has already been done, so I have to somehow swap those two pins.
+I submitted an issue and fixed the symbol in a pull request to the official KiCad symbols github repo.
+
+The fix isn't pretty, but it should work:
+
+![Assembly 10]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly (10).jpg" }})  
+
+**********************************
+<br/>
+
+### First boot
+
+After all this troubleshooting was done I checked short between power and GND, and then turned on the Game Boy:
+
+<p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/ue8mhNeEI1Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>  
+
+As cool as this is, I wasn't able to get any waveform on either channels so I'll have to troubleshoot some more.  
+
+**********************************
+<br/>
+
+### Troubleshooting, part 2
+
+TODO
