@@ -113,8 +113,8 @@ I was a bit rough cutting the shell, I should have used the dremel for this.
 
 ![Assembly 8]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly (8).jpeg" }})  
 
-That small hole is too low. I checked my technical drawing of the cart and I messed up the distance from top to center of the hole... 
-I broke off the pin that should go in that hole and fixed the PCB in KiCad and the tech. drawing, but now the PCB can move a bit so I hope it will still make good contact in the Game Boy.  
+That small hole is too low. I checked my technical drawing of the cart and I messed up the distance from top to center of the hole...  
+I broke off the pin from the shell that should go in that hole and fixed the PCB in KiCad and the tech. drawing, but now the PCB can move a bit so I hope it's still going to make good contact in the Game Boy.  
 
 ![Assembly 9]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly (9).jpeg" }})  
 

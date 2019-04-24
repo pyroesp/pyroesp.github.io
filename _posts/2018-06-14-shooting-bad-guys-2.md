@@ -1,6 +1,6 @@
 ﻿---
 layout: post
-title:  "Shooting bad guys - part 2"
+title:  "Shooting bad guys, part 2"
 date:   2018-06-14 13:00:00 +0200
 categories: [electronics, reverse engineering, playstation]
 ---
