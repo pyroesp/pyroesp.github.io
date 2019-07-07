@@ -49,7 +49,7 @@ The Arduino Nano will use the 3.5V from the PlayStation so I removed the AMS1117
 I also removed the CH430 chip as I won't use the serial port anymore, and some misc caps/diode.  
 This way only the ATMEGA328P will be powered by the PlayStation, plus it makes the bottom of the Arduino Nano flat.  
 
-![Arduino Nano Bottom]({{ https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/arduino%20nano%20bottom.jpg }})  
+![Arduino Nano Bottom]({{ "https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/arduino nano bottom.jpg" }})  
 
 If you didn't change the I/O from the code then these are the pins you need the resistors to.  
 * PB5 - SCK (input, connect to PS1 clock)
@@ -58,31 +58,31 @@ If you didn't change the I/O from the code then these are the pins you need the 
 * PB2 - /SS (input, connect to controller 1 select)
 * PB1 - playstation reset (output, connect to reset of parallel port (pin 2))
 
-![Arduino Nano Top]({{ https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/arduino%20nano%20top.jpg }})  
+![Arduino Nano Top]({{ "https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/arduino nano top.jpg" }})  
 
 PB1 has a 500 Ohm resistor. 1k was too much to pull the reset low.  
 You could use 2x 1k Ohm resistors in parallel here instead.
 
 Next you'll connect the Arduino Nano to the PlayStation.  
 
-![Controller Connection]({{ https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/controller%20connection.jpg }})  
+![Controller Connection]({{ "https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/controller connection.jpg" }})  
 
-![Controller Connection 2]({{ https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/controller%20connection%202.jpg }})  
+![Controller Connection 2]({{ "https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/controller connection 2.jpg }})  
 
-![Controller Connection Location]({{ https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/controller%20connection%20location.jpg }})  
+![Controller Connection Location]({{ "https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/controller connection location.jpg }})  
 
 The PlayStation reset can be connected here:  
 
-![Reset From Parallel Port]({{ https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/reset%20from%20parallel%20port.jpg }})  
+![Reset From Parallel Port]({{ "https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/reset from parallel port.jpg" }})  
 
 For power you want to connect the 3.5V of the PlayStation to the 5V of the Arduino Nano.  
 
 
 This is where I placed my Arduino Nano:  
 
-![PlayStation with Mod]({{ https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/playstation%20with%20mod.jpg }})  
+![PlayStation with Mod]({{ "https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/playstation with mod.jpg" }})  
 
-![PlayStation with Mod 2]({{ https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/playstation%20with%20mod%202.jpg }})  
+![PlayStation with Mod 2]({{ "https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/playstation with mod 2.jpg" }})  
 
 *******************
 <br/>
