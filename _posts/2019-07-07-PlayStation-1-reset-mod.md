@@ -6,25 +6,87 @@ categories: [electronics, playstation, modification]
 ---
 
 I've recently acquired a PSIO from Cybdyn System.  
-For those that don't know what this is, it's a device that's plugged into the parallel port of a PlayStation 1.  
+It's a device that's plugged into the parallel port of a PlayStation 1.  
 It allows you to play games from an SD card instead of a CD.  
 
 If you've ever had or heard about Krikzz EverDrive SD cartridges for older consoles, well it's similar to those.  
 
+
 When you first start the PlayStation with the PSIO plugged in, a menu pops up where you can choose your game.  
-The only thing missing to the PSIO is a way to get back to this menu.  
+The only thing missing to the PSIO is a way to get back to this menu once a game has been launched.  
 
 Here's where my mod comes into play.  
-The purpose of the mod is to be able to reset the PlayStation with a button combination on controller 1.
+The purpose of the mod is to be able to reset the PlayStation with a button combination on controller 1, so that you don't have to get up to reset the PS1.  
 
 *********************************  
+  
+### Disclaimer
 
+I'm not responsible for anything you with this mod.  
+You do this at your own risk.  
+
+If something blows up... You probably fucked up somewhere.  
+
+**********************************  
+  
 ### Parts needed
 
-This mod uses an Arduino Nano with 4x 1k Ohm resistors and 1x 500 Ohm resistor.  
+This mod uses an Arduino Nano with 4x 1k Ohm resistors and 1x 500 Ohm resistor or 2x 1k Ohm in parallel.  
+You'll also need some wire.
 
-**********************************
+Don't forget the program. You can find it here: [https://github.com/pyroesp/PlayStation-1-Reset-Mod](https://github.com/pyroesp/PlayStation-1-Reset-Mod).
 
+**********************************  
+  
+### Installing the mod
+
+First of all, flash your Arduino Nano. If you don't know how to do this, google it.  
+
+The next steps are just describing how I did it on my PU-18 motherboard and where I placed the Arduino.  
+You don't have to follow this. If you think you've found a better place to hide the Arduino then go for it.  
+
+The Arduino Nano will use the 3.5V from the PlayStation so I removed the AMS1117 voltage regulator.  
+I also removed the CH430 chip as I won't use the serial port anymore, and some misc caps/diode.  
+This way only the ATMEGA328P will be powered by the PlayStation, plus it makes the bottom of the Arduino Nano flat.  
+
+![Arduino Nano Bottom]({{ https://raw.githubusercontent.com/pyroesp/PlayStation-1-Reset-Mod/master/Pictures/arduino%20nano%20bottom.jpg }})  
+
+If you didn't change the I/O from the code then these are the pins you need the resistors to.  
+* PB5 - SCK (input, connect to PS1 clock)
+* PB4 - CMD (input, connect to PS1 TX)
+* PB3 - DATA (input, connect to PS1 RX)
+* PB2 - /SS (input, connect to controller 1 select)
+* PB1 - playstation reset (output, connect to reset of parallel port (pin 2))
+
+![Arduino Nano Top]({{ https://raw.githubusercontent.com/pyroesp/PlayStation-1-Reset-Mod/master/Pictures/arduino%20nano%20top.jpg }})  
+
+PB1 has a 500 Ohm resistor. 1k was too much to pull the reset low.  
+You could use 2x 1k Ohm resistors in parallel here instead.
+
+Next you'll connect the Arduino Nano to the PlayStation.  
+
+![Controller Connection]({{ https://github.com/pyroesp/PlayStation-1-Reset-Mod/blob/master/Pictures/controller%20connection.jpg }})  
+
+![Controller Connection 2]({{ https://github.com/pyroesp/PlayStation-1-Reset-Mod/blob/master/Pictures/controller%20connection%202.jpg }})  
+
+![Controller Connection Location]({{ https://raw.githubusercontent.com/pyroesp/PlayStation-1-Reset-Mod/master/Pictures/controller%20connection%20location.jpg }})  
+
+The PlayStation reset can be connected here:  
+
+![Reset From Parallel Port]({{ https://raw.githubusercontent.com/pyroesp/PlayStation-1-Reset-Mod/master/Pictures/reset%20from%20parallel%20port.jpg }})  
+
+For power you want to connect the 3.5V of the PlayStation to the 5V of the Arduino Nano.  
+
+
+This is where I placed my Arduino Nano:  
+
+![PlayStation with Mod]({{ https://raw.githubusercontent.com/pyroesp/PlayStation-1-Reset-Mod/master/Pictures/playstation%20with%20mod.jpg }})  
+
+![PlayStation with Mod 2]({{ https://raw.githubusercontent.com/pyroesp/PlayStation-1-Reset-Mod/master/Pictures/playstation%20with%20mod%202.jpg }})  
+
+
+**********************************  
+  
 ### Reading controller data
 
 I previously tried to decode PlayStation controller data so I already know what it looks like.  
@@ -45,6 +107,7 @@ For a controller, the next 2 bytes sent are its ID.
 For example, the value 0x5A41 is the ID to a digital controller.  
 Then comes the switch data.  
 
+
 The Arduino Nano is connected to CS, CLK, TX and RX.  
 It will only read TX and RX when the CS of port 1 goes low and on the rising edge of CLK.  
 
@@ -52,6 +115,8 @@ Once the data transfer is done it's going to decode the data to check whether or
 
 Reading TX and RX is done through polling, because I had a few issues trying to read data using interrupts.  
 
+**************************  
+  
 ### Parsing data
 
 The data is checked against a few defines in the code.  
@@ -92,11 +157,11 @@ After that it's going to check whether or not the reset button combination has b
 
 Changing those defines will change the reset button combination.  
 
-*****************************
-
+*****************************  
+  
 ### Resetting the PlayStation
 
-Once a reset command from the user has been detected, the Arduino Nano is going to pull the reset line of the PlayStation low.  
+Once a reset command from the user has been detected, the Arduino Nano is going to pull the reset line of the PlayStation low for a few ms.  
 ~~~
     // Check switch combo
     if (key_combo != 0 && 0 == (data.switches ^ key_combo)){
@@ -109,8 +174,10 @@ Once a reset command from the user has been detected, the Arduino Nano is going 
     }
 ~~~  
 
-*********************************
+A reboot delay of 30 seconds is added so that the PlayStation can boot properly before getting a new reset command.  
 
+*********************************  
+  
 ### Video
 
 <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/lb_uCGyv6pY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
