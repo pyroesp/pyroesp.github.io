@@ -10,8 +10,8 @@ It's a device that's plugged into the parallel port of a PlayStation 1.
 It allows you to play games from an SD card instead of a CD.  
 
 If you've ever had or heard about Krikzz EverDrive SD cartridges for older consoles, well it's similar to those.  
-
-
+  
+  
 When you first start the PlayStation with the PSIO plugged in, a menu pops up where you can choose your game.  
 The only thing missing to the PSIO is a way to get back to this menu once a game has been launched.  
 
@@ -69,6 +69,8 @@ Next you'll connect the Arduino Nano to the PlayStation.
 
 ![Controller Connection 2]({{ "https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/controller connection 2.jpg" }})  
 
+Here's an extra image so you can see where this is.  
+
 ![Controller Connection Location]({{ "https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/controller connection location.jpg" }})  
 
 The PlayStation reset can be connected here:  
@@ -76,8 +78,8 @@ The PlayStation reset can be connected here:
 ![Reset From Parallel Port]({{ "https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/reset from parallel port.jpg" }})  
 
 For power you want to connect the 3.5V of the PlayStation to the 5V of the Arduino Nano.  
-
-
+  
+  
 This is where I placed my Arduino Nano:  
 
 ![PlayStation with Mod]({{ "https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/playstation with mod.jpg" }})  
@@ -105,8 +107,8 @@ The PlayStation will then send byte 0x42 for a read command.
 For a controller, the next 2 bytes sent are its ID.  
 For example, the value 0x5A41 is the ID to a digital controller.  
 Then comes the switch data.  
-
-
+  
+  
 The Arduino Nano is connected to CS, CLK, TX and RX.  
 It will only read TX and RX when the CS of port 1 goes low and on the rising edge of CLK.  
 
@@ -177,6 +179,39 @@ A reboot delay of 30 seconds is added so that the PlayStation can boot properly 
 
 *******************
 <br/>
+### Changing button combination  
+
+If you want to change your combination, you'll have to change the key combo defines.  
+A pressed button returns 0 and all controllers send a 16 bit value for the switch status.  
+The switch is mapped as follows :  
+
+|  Button  | Bit |
+|:--------:|:---:|
+|  SELECT  |  0  |
+|    L3    |  1  |
+|    R3    |  2  |
+|   START  |  3  |
+|    UP    |  4  |
+|   RIGHT  |  5  |
+|   DOWN   |  6  |
+|   LEFT   |  7  |
+|    L2    |  8  |
+|    R2    |  9  |
+|    L1    |  10 |
+|    R1    |  11 |
+| TRIANGLE |  12 |
+|  CIRCLE  |  13 |
+|   CROSS  |  14 |
+|  SQUARE  |  15 |  
+
+The GUNCON buttons are:  
+* A = START
+* Trigger = CIRCLE
+* B = CROSS
+
+*******************
+<br/>
 ### Video
 
+Here's a quick video showing off the mod in action.  
 <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/lb_uCGyv6pY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
