@@ -67,9 +67,9 @@ Next you'll connect the Arduino Nano to the PlayStation.
 
 ![Controller Connection]({{ "https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/controller connection.jpg" }})  
 
-![Controller Connection 2]({{ "https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/controller connection 2.jpg }})  
+![Controller Connection 2]({{ "https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/controller connection 2.jpg" }})  
 
-![Controller Connection Location]({{ "https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/controller connection location.jpg }})  
+![Controller Connection Location]({{ "https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/controller connection location.jpg" }})  
 
 The PlayStation reset can be connected here:  
 
