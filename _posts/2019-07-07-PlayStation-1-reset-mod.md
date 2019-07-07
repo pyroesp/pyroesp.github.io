@@ -43,13 +43,15 @@ If something blows up... You probably fucked up somewhere.
 This mod uses an Arduino Nano, 4x 1k Ohm resistors and 1x 500 Ohm resistor or 2x 1k Ohm in parallel.  
 You'll also need some wire.
 
-You can find the reset mod program for Arduino Nano here: [https://github.com/pyroesp/PlayStation-1-Reset-Mod](https://github.com/pyroesp/PlayStation-1-Reset-Mod).
+You can find the reset mod program for Arduino Nano here:  
+[https://github.com/pyroesp/PlayStation-1-Reset-Mod](https://github.com/pyroesp/PlayStation-1-Reset-Mod).
 
 *******************
 <br/>
 ### Installing the mod
 
 First of all, flash your Arduino Nano with the reset mod program mentioned above. If you don't know how to do this, google it.  
+We will remove the USB to UART chip so you won't be able to program the Arduino Nano once it's installed.   
 
 The next steps are just describing how I did it on my PU-18 motherboard and where I placed the Arduino.  
 You don't have to follow this. If you think you've found a better place to hide the Arduino then go for it.  
@@ -57,6 +59,12 @@ You don't have to follow this. If you think you've found a better place to hide 
 The Arduino Nano will use the controller 3.5V from the PlayStation so I removed the AMS1117 5V voltage regulator.  
 I also removed the CH340 chip, as I won't have to use the serial port anymore, and some misc caps/diode.  
 This way only the ATMEGA328P will be powered by the PlayStation, plus it makes the bottom of the Arduino Nano flat.  
+
+**Note:** If you keep the Arduino Nano as is and plug it into your computer via USB **after** you installed it in the PS1, you are going to put 5V on the PlayStation 3.5V.  
+This will do 3 things:  
+* Send 5V to the controller through the 3.5V connection: might break stuff, I don't know...  
+* Send 5V to the PlayStation through the 3.5V connection: might break stuff, I don't know...  
+* Blow the controller 3.5V fuse (PS605): definitely broken, no more controller or memory card detected until the fuse gets replaced.  
 
 ![Arduino Nano Bottom]({{ "https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/arduino nano bottom.jpg" }})  
 
