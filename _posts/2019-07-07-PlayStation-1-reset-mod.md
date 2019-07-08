@@ -20,6 +20,8 @@ The purpose of the mod is to be able to reset the PlayStation with a button comb
 
 If you use the code as is then the reset button combination is **L2+R2+START+SELECT** for a digital/analog controller and **A+B+TRIGGER** for a GUNCON.  
 
+One thing to note here is that because the controllers are slave devices to the PlayStation, the PS1 won't reset if it freezes as the communication just stops.  
+
 *******************
 <br/>
 ### Video
