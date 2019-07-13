@@ -62,9 +62,12 @@ You don't have to follow this. If you think you've found a better place to hide 
 **Update 13/07/2019:** The use of the Arduino Nano as described below is actually underpowering the microcontroller.  
 Looking at the ATMEGA328P datasheet, if you use a 20MHz crystal oscillator then you have to power the microcontroller with 4.5V to 5.5V.  
 Because it is underpowerd, it could not work as intended. Mine is working fine, but yours might not.  
-You can power it from the PlayStation 5V, but I would recommend you add a diode as to block the USB 5V from powering the PlayStation motherboard.  
+You can power it from the PlayStation 5V by connecting the 5V supply directly to the 5V pin of the Arduino Nano, not the VIN!  
+I would recommend you add a diode, from the PS1 to the Arduino Nano, as to block the USB 5V from powering the PlayStation motherboard.  
 Even though the PlayStation input/outputs are 3.5V, the Arduino Nano is always sinking current.  
-This means that the Arduino Nano never outputs a logic 1 to the PlayStation and thus it's safe to connect the Arduino Nano to the PlayStation, even if it's powered from 5V.  
+This means that the Arduino Nano never outputs a logic 1 (or 5V) to the PlayStation and thus it's safe to connect it, even if it's powered from 5V.  
+If you do this, then you won't have to desolder the voltage regulator, nor the CH340 chip.
+You'll also be able to update the firmware on the Arduino Nano without blowing a fuse.  
 
 <br/>
 The Arduino Nano will use the controller 3.5V from the PlayStation so I removed the AMS1117 5V voltage regulator.  
