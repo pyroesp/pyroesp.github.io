@@ -58,6 +58,15 @@ We will remove the USB to UART chip so you won't be able to program the Arduino 
 The next steps are just describing how I did it on my PU-18 motherboard and where I placed the Arduino.  
 You don't have to follow this. If you think you've found a better place to hide the Arduino then go for it.  
 
+<br/>
+**Update 13/07/2019:** The use of the Arduino Nano as described below is actually underpowering the microcontroller.  
+Looking at the ATMEGA328P datasheet, if you use a 20MHz crystal oscillator then you have to power the microcontroller with 4.5V to 5.5V.  
+Because it is underpowerd, it could not work as intended. Mine is working fine, but yours might not.  
+You can power it from the PlayStation 5V, but I would recommend you add a diode as to block the USB 5V from powering the PlayStation motherboard.  
+Even though the PlayStation input/outputs are 3.5V, the Arduino Nano is always sinking current.  
+This means that the Arduino Nano never outputs a logic 1 to the PlayStation and thus it's safe to connect the Arduino Nano to the PlayStation, even if it's powered from 5V.  
+
+<br/>
 The Arduino Nano will use the controller 3.5V from the PlayStation so I removed the AMS1117 5V voltage regulator.  
 I also removed the CH340 chip, as I won't have to use the serial port anymore, and some misc caps/diode.  
 This way only the ATMEGA328P will be powered by the PlayStation, plus it makes the bottom of the Arduino Nano flat.  
