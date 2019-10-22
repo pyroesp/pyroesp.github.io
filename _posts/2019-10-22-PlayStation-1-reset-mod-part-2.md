@@ -16,16 +16,16 @@ Unfortunately the PSIO has no access to the status of the buttons on a controlle
 I had messed around with the PlayStation 1 communication before and I was sure I could build something that would do just that.  
 From my previous post you can see I managed to make something that worked, but was not perfect.  
 
-In this article I'm going to explain what I did afterwards.
+In this article I'm going to explain what I did afterwards.  
 *****************
-</br>
+<br/>
 ### Video
 
 But first here's a video of the latest version working:  
 <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/dBLZW0fIh68" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 ******************
-</br>
+<br/>
 ### Disclaimer
 
 This mod is a piece of hardware you add to the PlayStation. Although you don't have to modify the motherboard, it still requires a bit of soldering.  
@@ -35,14 +35,16 @@ If you don't know what you're doing, go to someone that does.
 **You do this at your own risk.**  
 
 ******************
-</br>
+<br/>
 ### Caution
 
 It goes without saying that resetting the PlayStation whilst you're saving data can corrupt the save data and/or the memory card.  
+Do **NOT** reset the PlayStation when it is writing data to the memory card.  
+
 You have been warned.  
 
 ******************
-</br>
+<br/>
 ### What's new
 
 Now that we're done with all the legal bullshit, let's talk about the differences with the previous version.  
@@ -55,7 +57,7 @@ Although this works there's two issues:
 The communication from the PS1 with the controller is basically SPI, which means that I needed a microcontroller with two SPI modules to be able to read the command and data signals.  
 Looking at what microchip has available in cheap mcu that has two SPI modules and can use high frequencies at 3.5VDC, is the 16F18325.  
 
-So that's what I'm using in the new mod.
+So that's what I'm using in the new mod.  
 
 
 
