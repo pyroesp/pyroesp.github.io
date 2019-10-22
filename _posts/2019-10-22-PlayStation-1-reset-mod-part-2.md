@@ -17,14 +17,15 @@ I had messed around with the PlayStation 1 communication before and I was sure I
 From my previous post you can see I managed to make something that worked, but was not perfect.  
 
 In this article I'm going to explain what I did afterwards.  
-*****************
+
+************************
 <br/>
 ### Video
 
 But first here's a video of the latest version working:  
 <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/dBLZW0fIh68" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
-******************
+************************
 <br/>
 ### Disclaimer
 
@@ -34,7 +35,7 @@ If you don't know what you're doing, go to someone that does.
 
 **You do this at your own risk.**  
 
-******************
+************************
 <br/>
 ### Caution
 
@@ -43,7 +44,7 @@ Do **NOT** reset the PlayStation when it is writing data to the memory card.
 
 You have been warned.  
 
-******************
+************************
 <br/>
 ### What's new
 
@@ -59,8 +60,6 @@ Looking at what microchip has available in cheap mcu that has two SPI modules an
 
 So that's what I'm using in the new mod.  
 
-
-
-*********************
-
+************************
+<br/>
 **TODO**
