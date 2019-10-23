@@ -64,4 +64,14 @@ So that's what I'm using in the new mod.
 
 ************************
 <br/>
+
+### Schematic and PCB
+
+![Schematic]({{ "https://raw.githubusercontent.com/pyroesp/PlayStation-1-Reset-Mod/master/pictures/mod/schematic.png" }})
+
+![pcb front]({{ "https://raw.githubusercontent.com/pyroesp/PlayStation-1-Reset-Mod/master/pictures/mod/pcb%20-%20front.png" }})
+
+![pcb bottom]({{ "https://raw.githubusercontent.com/pyroesp/PlayStation-1-Reset-Mod/master/pictures/mod/pcb%20-%20bottom.png" }})
+
+
 **TODO**
