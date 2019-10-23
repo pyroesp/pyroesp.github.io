@@ -53,10 +53,12 @@ Now that we're done with all the legal bullshit, let's talk about the difference
 The previous mod used an Arduino Nano (ATMEGA328P) at 16MHz, powered with the PlayStation 3.5VDC. The program written for it uses the polling method to read the command and data between the PS1 and controller.  
 Although this works there's two issues:  
 - The Arduino Nano is underpowered for the 16MHz at which it's running, so unexpected behaviour can happen. The datasheet specifies that anything above 8MHz needs to be powered from 5VDC.  
-- The polling method is unreliable as it does miss data, which means that the reset is not instantenious but could take a second. I also don't like how the polling loop is programmed.  
+- The polling method is unreliable as it does miss data, which means that the reset is not instantenious and takes a second. I also don't like how the polling loop has to be programmed.  
 
 The communication from the PS1 with the controller is basically SPI, which means that I needed a microcontroller with two SPI modules to be able to read the command and data signals.  
-Looking at what microchip has available in cheap mcu that has two SPI modules and can use high frequencies at 3.5VDC, is the 16F18325.  
+
+I've looked at what microchip has available and the 16F18325 was the cheapest mcu with two SPI modules they had.  
+The 16F18325 also can be powered by the 3.5VDC and use it's internal oscillator with PLL to go up to 32MHz.
 
 So that's what I'm using in the new mod.  
 
