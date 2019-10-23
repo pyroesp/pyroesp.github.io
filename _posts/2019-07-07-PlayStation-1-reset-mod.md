@@ -106,16 +106,16 @@ Here's an extra image so you can see where this is located.
 ![Controller Connection Location]({{ "https://raw.github.com/pyroesp/PlayStation-1-Reset-Mod/master/pictures/motherboard/controller connection location.jpg" }})  
 
 The PlayStation reset can be connected on pin 2 of the parallel port as shown below:
-![Reset From Parallel Port]({{ "https://raw.github.com/pyroesp/PlayStation-1-Reset-Mod/master/pictures/motherboard/reset from parallel port.jpg" }})  
+![Reset From Parallel Port]({{ "https://raw.github.com/pyroesp/PlayStation-1-Reset-Mod/master/pictures/arduino nano/reset from parallel port.jpg" }})  
 
 For power you want to connect the 3.5V of the PlayStation to the 5V of the Arduino Nano.  
 Don't forget the GND either.  
   
   
 This is where I placed my Arduino Nano:  
-![PlayStation with Mod]({{ "https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/playstation with mod.jpg" }})  
+![PlayStation with Mod]({{ "https://raw.github.com/pyroesp/PlayStation-1-Reset-Mod/master/pictures/arduino nano/playstation with mod.jpg" }})  
 
-![PlayStation with Mod 2]({{ "https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/playstation with mod 2.jpg" }})  
+![PlayStation with Mod 2]({{ "https://raw.github.com/pyroesp/PlayStation-1-Reset-Mod/master/pictures/arduino nano/playstation with mod 2.jpg" }})  
 
 I used some tape on the bottom of the Arduino so it wouldn't move.  
 All the wires are taped too. I also routed the wires with tape on the bottom side of the motherboard so they wouldn't get pinched or crushed when assembling it all back in one piece.  
