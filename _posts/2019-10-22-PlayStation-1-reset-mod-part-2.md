@@ -74,4 +74,4 @@ So that's what I'm using in the new mod.
 ![pcb bottom]({{ "https://raw.githubusercontent.com/pyroesp/PlayStation-1-Reset-Mod/master/pictures/mod/pcb%20-%20bottom.png" }})
 
 
-**TODO**
+<p align="center">**TODO**</p>
