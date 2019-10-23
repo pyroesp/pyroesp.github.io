@@ -80,7 +80,7 @@ This will do 3 things:
 * Send 5V to the PlayStation through the 3.5V connection: might break stuff, I don't know...  
 * Blow the controller 3.5V fuse (PS605): definitely broken, no more controller or memory card detected until the fuse gets replaced.  
 
-![Arduino Nano Bottom]({{ "https://github.com/pyroesp/PlayStation-1-Reset-Mod/raw/master/Pictures/arduino nano bottom.jpg" }})  
+![Arduino Nano Bottom]({{ "https://raw.github.com/pyroesp/PlayStation-1-Reset-Mod/master/pictures/arduino nano/arduino nano bottom.jpg" }})  
 
 If you didn't change the I/O from the code then these are the pins you need to solder resistors to.  
 * PB5 - SCK (input, connect to PS1 clock)
