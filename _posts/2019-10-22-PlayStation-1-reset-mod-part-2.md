@@ -62,16 +62,32 @@ The 16F18325 also can be powered by the 3.5VDC and use it's internal oscillator 
 
 So that's what I'm using in the new mod.  
 
+The [repo now has a first release](https://github.com/pyroesp/PlayStation-1-Reset-Mod/releases) which contains everything you need to make the board.
+
 ************************
 <br/>
 
 ### Schematic and PCB
 
+Below you'll find the schematic and a 3D render of the PCB.  
 ![Schematic]({{ "https://raw.githubusercontent.com/pyroesp/PlayStation-1-Reset-Mod/master/pictures/mod/schematic.png" }})
 
 ![pcb front]({{ "https://raw.githubusercontent.com/pyroesp/PlayStation-1-Reset-Mod/master/pictures/mod/pcb%20-%20front.png" }})
 
 ![pcb bottom]({{ "https://raw.githubusercontent.com/pyroesp/PlayStation-1-Reset-Mod/master/pictures/mod/pcb%20-%20bottom.png" }})
 
+The PCB is 14.5mm by 12mm, so it's small. The solder pads should be 1.5mm wide.  
+The pads on the back are smaller because they're only used for flashing the fimware.  
 
-<p align="center">**TODO**</p>
+After flashing, put some tape on the back so these don't make contact with anything on the motherboard.
+
+*************************
+<br/>
+
+### Making the PCB
+
+By downloading the first release on the github repository you'll get the firmware and the gerber files for the PCB.  
+Go to JLCPCB and click on the "Quote Now" button for the PCB prototype. These are 2$ for 5 boards (not including shipping).  
+
+
+<p align="center">-- TODO --</p>
