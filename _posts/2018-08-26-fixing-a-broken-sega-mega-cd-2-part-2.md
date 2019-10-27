@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "Fixing a broken Sega Mega-CD 2, part 2"
 date:   2018-08-26 05:00:00 +0200
