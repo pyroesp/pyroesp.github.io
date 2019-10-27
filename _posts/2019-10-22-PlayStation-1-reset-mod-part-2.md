@@ -48,14 +48,17 @@ You have been warned.
 <br/>
 ### Proof of Concept
 
-Now that we're done with all the legal bullshit, let's talk about the previous version.  
+Now that we're done with all the legal bullshit, let's talk about the previous versions.  
 
 The first mod used an Arduino Nano (ATMEGA328P) at 16MHz, powered with the PlayStation 3.5VDC. The program written for it uses the polling method to read the command and data between the PS1 and controller.  
-Although this works there's two issues:  
+Although this works there are two issues:  
 - The Arduino Nano is underpowered for the 16MHz at which it's running, so unexpected behaviour can happen. The datasheet specifies that anything above 8MHz needs to be powered from 5VDC.  
-- The polling method is unreliable as it does miss data, which means that the reset is not instantenious and takes a second. I also don't like how the polling loop has to be programmed.  
+- The polling method is unreliable as it does miss data, which means that the reset is not instantenious and takes a second. I also don't like continiously polling for data.  
 
-This is also the one I'm talking about in the first article.  
+Here is a flowchart I made of the first proof of concept code:  
+![flowchart v1]({{ "https://raw.githubusercontent.com/pyroesp/PlayStation-1-Reset-Mod/master/atmega328p/polling/PS1_reset_mod_v1.png" }})
+
+This version is also the one I'm talking about in the first article.  
 
 In the second proof of concept I tried to use interrupts to remove the polling loop.  
 I used the two INT interrupts and a timer. The first INT interrupt was looking at the SS signal.  
@@ -65,18 +68,21 @@ The 2nd INT interrupt would trigger every rising edge and copy the state of the 
 This data would then be rebuilt into the PlayStation CMD and DATA.  
 Unfortunatelly there where some issues with this that I still am not sure what the causes are.  
 
-One issue I found was due to the Playstation beeing 3.5VDC and the Arduino Nano was 5V. The voltage of the signals from the PlayStation was sometimes in the unknown region of the input pin of the Arduino, due to resistance and load...  
+One issue I found was due to the Playstation controller being powered from 3.5VDC and the Arduino Nano from 5V. The voltage of the signals from the PlayStation were sometimes in the unknown region of the input pin of the Arduino due to resistance, load, etc.  
 
-The concept was nicer than the polling loop but it just didn't work.  
+The concept was nicer than the polling loop but it didn't work. Maybe with a bit more time and troubleshooting this could have worked, but I found that the effort I put into this was waisted due to there being a better way to do this.  
+
+Here's the flowchart for the 2nd proof of concept:  
+![flowchart v2.1]({{ "https://raw.githubusercontent.com/pyroesp/PlayStation-1-Reset-Mod/master/atmega328p/INT-interrupt/PS1_reset_mod_v2.1.png" }})
 
 
 The communication from the PlayStation with the controller is basically SPI, which means that I needed a microcontroller with two SPI modules to be able to read the command and data signals. Because of this I choose the ATMEGA328PB which is an improved version of the ATMEGA328P that has two SPI modules.
 
 And so the 328PB was going to be used in my 3rd proof of concept.  
 
-I removed the ATMEGA328P from an Arduino Nano and soldered on an ATMEGA328PB, because they're pin compatible.  
+I removed the ATMEGA328P from an Arduino Nano and soldered on an ATMEGA328PB, because they're pin compatible. The neat thing about this is I have a board that works with the 328PB without any issues, and it has a CH340 USB to UART converter.  
 The code was written in Atmel Studio and I flashed the ATMEGA328PB with an old USBasp a friend of mine made years ago.  
-I programmed it so that it would use both SPI modules to read the CMD and DATA, without having to make workarounds like in the previous concepts.  
+I programmed it so that it would use both SPI modules to read the command and data, without having to make workarounds like in the previous concepts.  
 This proof of concept worked perfectly, but there were some things that could be improved:
 - The microcontroller was big, too big for what it needed to be. Big in the essence of too many I/O, too much memory, etc.  
 - The ATMEGA328PB, like the 328P version, can't run at more than 8MHz if it's powered at 3.3VDC and I felt that that wouldn't have been enough (even though it probably wold have been fine).  
@@ -97,16 +103,40 @@ If you look at the Arduino Nano and the ATMEGA28P, you'll see that each I/O is c
 The 16F18325 can be customized to whatever configuration you want. If you want your UART TX & RX on RA1 & RA2, you can do that.  
 If it so happens that that wasn't a good choice, due to for example board layout, you can change the UART TX & RX to somewhere else.  
 
-This is amazing! The customazability of the 16F18325 and other microcontrollers like this is endless.  
+This is amazing! The customizability of the 16F18325 and other microcontrollers like this one is endless.  
 
-Each SPI module has a CLK, SS, MISO and MOSI. Because we are only reading data, we don't need MISO.  
-So those would usually take 6 I/O, but thanks to the 16F18325 we can do this with 4 I/O.  
+Each SPI module has a CLK, SS, MISO and MOSI. Because we don't reply to the data sent, we don't need MISO.  
+So those would usually take 6 I/O pins, but thanks to the 16F18325 we can do this with 4 I/O.  
 
-The CLK and SS are the same for both SPI moduls, so the program connects both SPI CLK to the same I/O. Same thing for the SS.  
+The CLK and SS are the same for both SPI modules, so the program connects both SPI CLK to the same I/O. Same thing for the SS.  
 The MOSI inputs are internally connected to different pins which in turn are connected to CMD and DATA.  
-And this works perfeclty fine like you can see in the previous video.  
+And this works perfeclty fine like you can see in the video above.  
 
 I have also setup the SPI inputs to be different than the ICSP connections. Although I wouldn't recommend you to flash the microcontroller when it's connected to the PlayStation 1, you could.  
+
+```C
+/*
+ Connection:
+    RA2 = SS
+    RC0 = CLK
+    RC1 = DATA
+    RC2 = CMD
+    SDO1,2 = unassigned
+    RC5 = RESET
+ */
+ 
+ // ...
+ 
+    // SETUP SPI1 & SPI2 I/O
+    SSP1SSPPSbits.SSP1SSPPS = 0x02; // SS1 = RA2 
+    SSP2SSPPSbits.SSP2SSPPS = 0x02; // SS2 = RA2 
+    
+    SSP1CLKPPSbits.SSP1CLKPPS = 0x10; // SCK1 = RC0
+    SSP2CLKPPSbits.SSP2CLKPPS = 0x10; // SCK2 = RC0
+    
+    SSP1DATPPSbits.SSP1DATPPS = 0x11; // SDI1 = RC1 
+    SSP2DATPPSbits.SSP2DATPPS = 0x12; // SDI2 = RC2 
+```
 
 The [first release on the github repository](https://github.com/pyroesp/PlayStation-1-Reset-Mod/releases) contains everything you need to make the board and flash the 16F18325.  
 
@@ -141,8 +171,8 @@ Upload the gerber files to JLCPCB like they ask you to.
 If you don't know what to select in the parameters below, then these are my settings:  
 ![pcb fab settings]({{ "https://raw.githubusercontent.com/pyroesp/PlayStation-1-Reset-Mod/master/pictures/mod/jlcpcb_parameters.PNG" }})  
 
-You can change the PCB width from 1.6 to 0.6mm without additional cost.  
-Changing color also doesn't add cost, but it does add a day or two in the fabrication of the PCB.  
+At the time of writing you can change the PCB width from 1.6 to 0.6mm without additional cost.  
+Green is the default color, but changing it doesn't add cost. It does add a day or two in the fabrication of the PCB.  
 
 **************************
 <br/>
@@ -151,3 +181,4 @@ Changing color also doesn't add cost, but it does add a day or two in the fabric
 
 Changing the button combination is trivial to do.  
 Checkout the last chapter in [the first part of this mod blog post]({{ "https://pyroesp.github.io/electronics/reverse%20engineering/playstation/modification/2019/07/07/PlayStation-1-reset-mod.html" }}). I have explained how to do it there.  
+Once done, recompile and flash the microcontroller.  
