@@ -88,7 +88,8 @@ This proof of concept worked perfectly, but there were some things that could be
 - The microcontroller was big, too big for what it needed to be. Big in the essence of too many I/O, too much memory, etc.  
 - The ATMEGA328PB, like the 328P version, can't run at more than 8MHz if it's powered at 3.3VDC and I felt that that wouldn't have been enough (even though it probably wold have been fine).  
 
-**************************
+************************
+<br/>
 
 ### First release
 
