@@ -139,7 +139,7 @@ Go to JLCPCB and click on the "Quote Now" button for the PCB prototype. These ar
 
 Upload the gerber files to JLCPCB like they ask you to.  
 If you don't know what to select in the parameters below, then these are my settings:  
-![pcb fab settings]({{ "https://raw.githubusercontent.com/pyroesp/PlayStation-1-Reset-Mod/master/pictures/mod/jlcpcb_parameters.png" }})  
+![pcb fab settings]({{ "https://raw.githubusercontent.com/pyroesp/PlayStation-1-Reset-Mod/master/pictures/mod/jlcpcb_parameters.PNG" }})  
 
 **************************
 <br/>
