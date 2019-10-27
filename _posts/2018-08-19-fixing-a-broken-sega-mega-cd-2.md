@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "Fixing a broken Sega Mega-CD 2"
 date:   2018-08-19 10:00:00 +0200
@@ -119,7 +119,7 @@ I turned it back on, and there it was, in all it's glory:
 <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/mwROd91qzWs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
 
 What had happened is that by plugging the MD-2 on and off the Mega-CD 2, the connector on both consoles broke through a layer of dust and oxidation.<br/>
-This was something I didn't think about as the MD-2 was in working condition and still had the protective cap over the PCB contacts.The Mega-CD 2 connector though, it's always open so dust can easily get in there.
+This was something I didn't think about as the MD-2 was in working condition and still had the protective cap over the PCB contacts. The Mega-CD 2 connector though, it's always open so dust can easily get in there.
 
 It didn't cross my mind to check the connectors to be honest.
 
