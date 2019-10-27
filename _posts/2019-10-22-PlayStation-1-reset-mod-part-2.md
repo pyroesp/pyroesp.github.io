@@ -13,7 +13,7 @@ This device let's you play games from an SD card on a PlayStation 1, a bit like 
 After playing around with it for a bit I saw a user on the PSIO forums ask for a way to reset the PlayStation 1 through a button combination.  
 Unfortunately the PSIO has no access to the status of the buttons on a controller, so this can't be done from the PSIO.  
 
-I had messed around with the PlayStation 1 communication before and I was sure I could build something that would do just that.  
+I had messed around with the PlayStation 1 communication before and I was confident I could build something that would do just that.  
 From my previous post you can see I managed to make something that worked, but was not perfect.  
 
 In this article I'm going to explain what I did afterwards.  
@@ -46,23 +46,67 @@ You have been warned.
 
 ************************
 <br/>
-### What's new
+### Proof of Concept
 
-Now that we're done with all the legal bullshit, let's talk about the differences with the previous version.  
+Now that we're done with all the legal bullshit, let's talk about the previous version.  
 
-The previous mod used an Arduino Nano (ATMEGA328P) at 16MHz, powered with the PlayStation 3.5VDC. The program written for it uses the polling method to read the command and data between the PS1 and controller.  
+The first mod used an Arduino Nano (ATMEGA328P) at 16MHz, powered with the PlayStation 3.5VDC. The program written for it uses the polling method to read the command and data between the PS1 and controller.  
 Although this works there's two issues:  
 - The Arduino Nano is underpowered for the 16MHz at which it's running, so unexpected behaviour can happen. The datasheet specifies that anything above 8MHz needs to be powered from 5VDC.  
 - The polling method is unreliable as it does miss data, which means that the reset is not instantenious and takes a second. I also don't like how the polling loop has to be programmed.  
 
-The communication from the PS1 with the controller is basically SPI, which means that I needed a microcontroller with two SPI modules to be able to read the command and data signals.  
+This is also the one I'm talking about in the first article.  
 
-I've looked at what microchip has available and the 16F18325 was the cheapest mcu with two SPI modules they had.  
-The 16F18325 also can be powered by the 3.5VDC and use it's internal oscillator with PLL to go up to 32MHz.
+In the second proof of concept I tried to use interrupts to remove the polling loop.  
+I used the two INT interrupts and a timer. The first INT interrupt was looking at the SS signal.  
+Whenever the SS was pulled low, the interrupt would trigger and start the timer.  
+The timer would run for a few ms and when it overflowed it would check the SS signal again. If that was still low then it would enable the 2nd INT interrupt on the CLK.  
+The 2nd INT interrupt would trigger every rising edge and copy the state of the whole input port.  
+This data would then be rebuilt into the PlayStation CMD and DATA.  
+Unfortunatelly there where some issues with this that I still am not sure what the causes are.  
+
+One issue I found was due to the Playstation beeing 3.5VDC and the Arduino Nano was 5V. The voltage of the signals from the PlayStation was sometimes in the unknown region of the input pin of the Arduino, due to resistance and load...  
+
+The concept was nicer than the polling loop but it just didn't work.  
+
+
+The communication from the PlayStation with the controller is basically SPI, which means that I needed a microcontroller with two SPI modules to be able to read the command and data signals. Because of this I choose the ATMEGA328PB which is an improved version of the ATMEGA328P that has two SPI modules.
+
+And so the 328PB was going to be used in my 3rd proof of concept.  
+
+I removed the ATMEGA328P from an Arduino Nano and soldered on an ATMEGA328PB, because they're pin compatible.  
+The code was written in Atmel Studio and I flashed the ATMEGA328PB with an old USBasp a friend of mine made years ago.  
+I programmed it so that it would use both SPI modules to read the CMD and DATA, without having to make workarounds like in the previous concepts.  
+This proof of concept worked perfectly, but there were some things that could be improved:
+- The microcontroller was big, too big for what it needed to be. Big in the essence of too many I/O, too much memory, etc.  
+- The ATMEGA328PB, like the 328P version, can't run at more than 8MHz if it's powered at 3.3VDC and I felt that that wouldn't have been enough (even though it probably wold have been fine).  
+
+### First release
+
+After the 3rd proof of concept I looked at what microchip had available and the 16F18325 was the cheapest microcontroller with two SPI modules.  
+The 16F18325 can be powered by the 3.5VDC and use it's internal oscillator with PLL to go up to 32MHz.
 
 So that's what I'm using in the new mod.  
 
-The [repo now has a first release](https://github.com/pyroesp/PlayStation-1-Reset-Mod/releases) which contains everything you need to make the board.
+I used MPLABX with the XC8 compiler and a PICKit3 to flash the microcontroller.  
+The awesome thing about the 16F18325 is that you can select which I/O is connected to which module.  
+
+If you look at the Arduino Nano and the ATMEGA28P, you'll see that each I/O is connected to a module like the UART or the SPI or ADC, but those are fixed...  
+The 16F18325 can be customized to whatever configuration you want. If you want your UART TX & RX on RA1 & RA2, you can do that.  
+If it so happens that that wasn't a good choice, due to for example board layout, you can change the UART TX & RX to somewhere else.  
+
+This is amazing! The customazability of the 16F18325 and other microcontrollers like this is endless.  
+
+Each SPI module has a CLK, SS, MISO and MOSI. Because we are only reading data, we don't need MISO.  
+So those would usually take 6 I/O, but thanks to the 16F18325 we can do this with 4 I/O.  
+
+The CLK and SS are the same for both SPI moduls, so the program connects both SPI CLK to the same I/O. Same thing for the SS.  
+The MOSI inputs are internally connected to different pins which in turn are connected to CMD and DATA.  
+And this works perfeclty fine like you can see in the previous video.  
+
+I have also setup the SPI inputs to be different than the ICSP connections. Although I wouldn't recommend you to flash the microcontroller when it's connected to the PlayStation 1, you could.  
+
+The [first release on the github repository](https://github.com/pyroesp/PlayStation-1-Reset-Mod/releases) contains everything you need to make the board and flash the 16F18325.  
 
 ************************
 <br/>
@@ -79,7 +123,9 @@ Below you'll find the schematic and a 3D render of the PCB.
 The PCB is 14.5mm by 12mm, so it's small. The solder pads should be 1.5mm wide.  
 The pads on the back are smaller because they're only used for flashing the fimware.  
 
-After flashing, put some tape on the back so these don't make contact with anything on the motherboard.
+After flashing, put some tape on the back so these don't make contact with anything on the motherboard.  
+
+A guide is being made so that everyone can install this mod in their PlayStation 1.
 
 *************************
 <br/>
@@ -89,5 +135,14 @@ After flashing, put some tape on the back so these don't make contact with anyth
 By downloading the first release on the github repository you'll get the firmware and the gerber files for the PCB.  
 Go to JLCPCB and click on the "Quote Now" button for the PCB prototype. These are 2$ for 5 boards (not including shipping).  
 
+Upload the gerber files to JLCPCB like they ask you to.  
+If you don't know what to select in the parameters below, then these are my settings:  
+![pcb fab settings]({{ "https://raw.githubusercontent.com/pyroesp/PlayStation-1-Reset-Mod/master/pictures/mod/jlcpcb_parameters.png" }})  
 
-<p align="center">-- TODO --</p>
+**************************
+<br/>
+
+### Changing buttons
+
+Changing the button combination is trivial to do.  
+Checkout the last chapter in [the first part of this mod blog post]({{ "https://pyroesp.github.io/electronics/reverse%20engineering/playstation/modification/2019/07/07/PlayStation-1-reset-mod.html" }}). I have explained how to do it there.  
