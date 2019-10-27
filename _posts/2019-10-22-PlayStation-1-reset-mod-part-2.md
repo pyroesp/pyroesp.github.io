@@ -56,10 +56,11 @@ Although this works there are two issues:
 - The polling method is unreliable as it does miss data, which means that the reset is not instantenious and takes a second. I also don't like continiously polling for data.  
 
 Here is a flowchart I made of the first proof of concept code:  
-![flowchart v1]({{ "https://raw.githubusercontent.com/pyroesp/PlayStation-1-Reset-Mod/master/atmega328p/polling/PS1_reset_mod_v1.png" }})
+![flowchart v1]({{ "https://raw.githubusercontent.com/pyroesp/PlayStation-1-Reset-Mod/master/atmega328p/polling/PS1_reset_mod_v1.png" }})  
 
 This version is also the one I'm talking about in the first article.  
-
+<br/>
+<br/>
 In the second proof of concept I tried to use interrupts to remove the polling loop.  
 I used the two INT interrupts and a timer. The first INT interrupt was looking at the SS signal.  
 Whenever the SS was pulled low, the interrupt would trigger and start the timer.  
@@ -73,9 +74,9 @@ One issue I found was due to the Playstation controller being powered from 3.5VD
 The concept was nicer than the polling loop but it didn't work. Maybe with a bit more time and troubleshooting this could have worked, but I found that the effort I put into this was waisted due to there being a better way to do this.  
 
 Here's the flowchart for the 2nd proof of concept:  
-![flowchart v2.1]({{ "https://raw.githubusercontent.com/pyroesp/PlayStation-1-Reset-Mod/master/atmega328p/INT-interrupt/PS1_reset_mod_v2.1.png" }})
-
-
+![flowchart v2.1]({{ "https://raw.githubusercontent.com/pyroesp/PlayStation-1-Reset-Mod/master/atmega328p/INT-interrupt/PS1_reset_mod_v2.1.png" }})  
+<br/>
+<br/>
 The communication from the PlayStation with the controller is basically SPI, which means that I needed a microcontroller with two SPI modules to be able to read the command and data signals. Because of this I choose the ATMEGA328PB which is an improved version of the ATMEGA328P that has two SPI modules.
 
 And so the 328PB was going to be used in my 3rd proof of concept.  
