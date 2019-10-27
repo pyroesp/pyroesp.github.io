@@ -141,6 +141,9 @@ Upload the gerber files to JLCPCB like they ask you to.
 If you don't know what to select in the parameters below, then these are my settings:  
 ![pcb fab settings]({{ "https://raw.githubusercontent.com/pyroesp/PlayStation-1-Reset-Mod/master/pictures/mod/jlcpcb_parameters.PNG" }})  
 
+You can change the PCB width from 1.6 to 0.6mm without additional cost.  
+Changing color also doesn't add cost, but it does add a day or two in the fabrication of the PCB.  
+
 **************************
 <br/>
 
