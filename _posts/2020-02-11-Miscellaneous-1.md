@@ -121,6 +121,16 @@ My twitter DMs are always open.
 
 ************************
 <br/>
+### Bunny friend
+
+For those that know me, I've had a bunny for a few years until he got sick and we decided to have him put down for his own good. He was free to go wherever he wanted. I love how he hopped around.  
+
+Latelly a good friend of mine got a bunny and since he sent me a picture we've been talking at home about maybe getting one that I would take care of in my room. I have 2 rooms with no door in between so it's a fairly good size room where he could run around.  
+I'm still thinking about it, but I might be getting a little bunny in the future.
+
+
+************************
+<br/>
 ### Other stuff
 
 There are other things I don't feel very confortable talking in details about here, like the fact someone in the family decided to move to another country.  
