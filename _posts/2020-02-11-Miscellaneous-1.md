@@ -1,0 +1,137 @@
+---
+layout: post
+title:  "Miscellaneous 1"
+date:   2020-02-11 08:00:00 +0100
+categories: [miscellaneous]
+---
+
+### Miscellaneous post
+
+It feels like yesterday when I made the Playstation 1 reset mod, but looking at the dates on the last posts I made, it's been more than a year.  
+Time flies by so fast, but at the same time it doesn't feel like it... Not sure if I make sense.  
+
+I thought it would be good to have a little update post about what happened since last year's post.  
+There have been a few minor and major events since then.
+
+
+************************
+<br/>
+### New job
+
+Starting January 2020 I got into an IT job at the same company.  
+I'm doing SQL and other IT related stuff now.  
+
+Before you ask why someone with an electronics bachelor does IT, you need to know that for the past 5 years I've been working in shifts as a technician in a team of 4 or 5 people.  
+If something stopped working then operators would call us to figure out why. It was rewarding to be able to troubleshoot problems and fix them, essentially helping others.  
+This of course needed to be done quickly as to not have extended periods of downtime. Production never stops here, it's 24/7.  
+
+Although the job was rewarding, it killed me socially and it was mentally draining. I would get home tired all the time.  
+I am a shy introvert, so I didn't go out much before. I do have a few close friends (still do have them) that I hung out with every other couple of weekends.  
+With them I can pretty much open up and be my normal self instead of the shy guy playing with animals so I don't have to speak to anyone I didn't know.  
+
+Because I had to work weekends, it means I had less time to see my friends. Although I was with pretty cool team, they're colleagues and not people I hung out with.  
+Probably due to my own faults more than anything.  
+
+My life up until now was pretty much: wake up, go to work, go home, eat, sleep, repeat. Every few days I had 2 days off and then the shift changed.  
+Those 2 days off were more for resting and recuperating from previous days than anything else, so no work was done.
+I completely left out my passion and hobby which is electronics.  
+I tried to do some online courses over the years on edx, and I got a couple done with passing grades. It wasn't easy to stay focused on those for long.  
+
+
+Anyways, seeing as they had an open job in IT, which to me meant normal day job, I thought I "could take back my life" if I got it. And in some ways I did, more on that later.  
+As it was pretty specific, and because no one else applied, I got the job. It's not easy, but I'm learning new things every day.
+
+Honestly speaking, I never thougth I would do IT, but here we are.  
+
+
+Having a day job now, I'm not exhausted when I get home in the afternoon. Weekends aren't just for resting and doing nothing for 2 days straight.  
+I've been more active and working on different projects that I'd like to share with you on other posts.  
+Recently I worked in converting a Sega Saturn Racing Wheel controller into a PC controller, which I think you'd like to hear.  
+
+Having a day job also meant I had my weekends back and so I could hang out with friends again.  
+But then COVID happened...
+
+
+************************
+<br/>
+### COVID
+
+With COVID came working from home, which fortunatelly enough, I was able to do thanks to the new job in IT.  
+COVID also means not going outside, not seeing friends or family.  
+
+So from March up until June I worked from home. The COVID numbers were down and so I had to go back to work.  
+In Jully I talked about my concerns of the growing number of COVID patients and in mid-Jully I started working from home again.  
+
+I have been working from home since then.  
+
+It seems that people have been less and less worried about COVID, and misinformation about it has been spreading too.  
+Numbers are at an all time high again, with 17500 new cases in one day at the end of October.  
+
+**NOTE: Source on the 17500 from https://www.worldometers.info/coronavirus/country/belgium/
+
+We try to do everything the docters and the government said about staying home, wearing masks, washing hands, etc etc.  
+Unfortunatelly a family member we know got COVID from someone else and came home a few times before they were tested.  
+My parents became ill, starting with my mother and a week later my dad. Then a week or two later I myself got sick.  
+We all got tested prior to my dad being ill and all were positive except me.  
+
+I don't know if you can imagine the stress I had knowing that both my parents are sick with COVID, both being over 60 years old. I didn't sleep well for a couple of days.  
+My dad slept on the couch as my mom didn't want him with her. The same night we got tested my dad had a ~38°C fever.  
+She would feel so guilty to have given my dad COVID, she would brake down a few times since the day my dad got ill. It was horrible to not being able to hug her in those moments.  
+At this point I didn't give a shit if I got COVID too, but she wouldn't let me approach her for fear of me catching COVID too.
+She tried to have some control over the situation and so I had to isolate myself from them. As to not upset her and make her feel more guilty and stressed than she already is, I went along with what she asked.  
+I've been wearing masks at home since around the 12th of October and although I was isolated in my room, I did go check on them a couple times a day.  
+
+Something I did early on was buy an oxymeter, as I had read a lot about how COVID messes up the lungs, and gave it to my mom as she was coughing all day and night.  
+I think my aunt came by to give us thermometers, or maybe we already had a few, and so every day I would check up on them to see how they were doing.  
+
+Dad for the most part was ok, except the fever that came during the night. It was mostly kept under control with Paracetamol. From what he told me, it never got higher than 38.5°C.  
+He tried the oxymeter a few times and the numbers were always in the high 90s (96 and up) which is very reassuring to see. He didn't have a cough, so I wasn't that worried.
+10 days later or so, my dad didn't have any fever anymore, just an 'itchy' throat which makes him cough from time to time to this day.
+My dad also kept on walking inside the house, as before the COVID hit us I installed him a step counter. He walked a few km every day, I'm sure that helped somewhat to keep him active and fighting.  
+
+Mom on the other hand would cough a lot. So much so that her ribs started to hurt. Because of this she would not sleep well either.  
+I checked on her almost daily to check on her oxygen and although she had lower results than my dad, hers were above 90 (around 90 to 94) too. As reassuring as that was I told her to check it a few times a day.  
+She too had fever, higher than my dad. This was somewhat kept under control again with Paracetamol.  
+What worried me more is that she didn't eat or barely ate for the first couple of days. So I went and picked her up some yogurts and fruit which she could eat with less trouble.  
+She wasn't eating a lot but at least she ate something.  
+For her cough the doctor prescribed her a strong syrop which helped a bit for the first few days. Later though she asked for something stronger and got a machine with which she had to breath in some kind of medicine through a mask.  
+I'm not sure what it's called, but this is helping her a lot.  
+Nowadays mom is still coughing, but way way less than before. She hasn't had any fever for a good couple days either and she's been eating so much better.  
+Mom does have at least one problem due to COVID. If she tries to go from the 1st floor to the 3rd, she has to sit down to catch her breath. Something she did not have before.  
+She and my dad have been quarantined for more than 2 weeks now and they have started to go on walks together so my mom could exercise a bit. They have steadily been going out for longer and longer time.  
+Mom also went to do some shopping for food the other day alone, which worried me, but she promised me she would go slowly and nothing bad happened.  
+
+As much as we tried to isolate one another and use desinfectant if we ever got out of the rooms, I started having symptoms too.  
+First I felt pressure in my sinusses, then later I couldn't breath from my nose and had to use a nasal spray. After that came the fever and then coughing.  
+I don't know when it started but I have very limitted sense of smell and taste too.  
+The fever was gone after a week, but I'm still coughing mostly at night.  
+I've been sleeping 10 to 15 hours a day for a couple of days too because I felt so tired. And no matter how long I slept I was always tired.  
+I'm still tired now but mostly because I don't sleep well. Not sure if that's still a COVID issue.  
+I'm about a bit more than a week in quarantine and still have no sense of smell and taste, I still cough quite a bit, and I'm always tired.  
+
+
+As far as I can tell, we have been pretty lucky when you see all the people that need respirators, need to go to the hospital, or even the people that die from it.  
+Dad is fine as far as I can tell, mom is ok and doing a bit better every day, and I'm not doing too bad.  
+I'm not sure why I tested negative that day, seeing as we didn't isolate before we knew the results of the family member's test.  
+
+
+I hope that all of you reading this, and the people around you, are doing ok.  
+My twitter DMs are always open.  
+
+
+************************
+<br/>
+### Other stuff
+
+There are other things I don't feel very confortable talking in details about here, like the fact someone in the family decided to move to another country.  
+If you've ever chatted with me (on discord or other) I may have mentionned this.
+
+
+************************
+<br/>
+### End
+
+I'm going to end the post here. I've said what I felt confortable in saying. I wanted to share with you the fact I have been doing more electronic projects which I'm so happy about. It's been so long.  
+I also wanted to share with you that I have a new job and the fact we have COVID (with mild symptoms).   
+
+I hope to get around to make the new posts about the projects I've been working on these past months, and I hope you'll like reading them.  
