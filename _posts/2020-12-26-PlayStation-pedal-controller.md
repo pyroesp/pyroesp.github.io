@@ -44,7 +44,7 @@ All devices are connected to the same SPI bus which contains: command (CMD), dat
 
 Controller 1 and memory card 1 share the same chip select line and are further differentiated by an address sent by the PlayStation on the command line. Idem for controller 2 and memory card 2 but for the other chip select.  
 
-Every byte received from the PlayStation (ie for every CMD) we also need to send an ACK pulse.  
+Every byte received from the PlayStation, ie. for every CMD, we also need to send an ACK pulse.  
 
 You can see a logic analyzer picture below showing a frame of communication with a guncon.  
 ![GUNCON Logic Analyzer - Shooting Outside of screen]({{ "/assets/2018-06-14-shooting-bad-guys-2/LA-GUNCON-1.png" }})  
@@ -56,7 +56,6 @@ You can see a logic analyzer picture below showing a frame of communication with
 
 I'm using the same structure from the reset mod.  
 This helps me read the commands, differentiate between the memory card and controller, and have a data buffer ready to send.
-
 ```C
 /* PlayStation Controller Command Union */
 union PS1_Cmd{
@@ -86,6 +85,7 @@ Sending data and receiving commands to and from the PlayStation happens with the
 An interrupt is used to determine if the PlayStation is trying to read controller data or memory card data.  
 If it's memory card data then our SPI module is disabled until the chip select is high, which indicates that the PlayStation finished reading data out of the memory card.  
 If it's the controller then the content of the data buffer is sent byte by byte.  
+
 
 Because we still need to send an ACK and don't want to pause in an interrupt, I set a flag high that will execute a piece of code in the main loop.  
 ```C
@@ -121,7 +121,8 @@ In this bit of code I'm setting a pin to an output LOW and waiting a bit with NO
 
 I'm using NOPs here because I need a very quick pulse of at least 2us.  
 
-Reading the button is just a matter of toggling the correct bit in key status bytes.  
+
+Reading the button is just a matter of toggling the correct bit in the key status bytes.  
 ```C
 // Read pedal switch status
 if (GET_BIT(PEDAL_PORT, PEDAL_INPUT) != PEDAL_BUTTON_MODE){
@@ -136,7 +137,8 @@ if (GET_BIT(PEDAL_PORT, PEDAL_INPUT) != PEDAL_BUTTON_MODE){
 }
 ```
 
-I've put a system in to detect if the button is normal open or normal closed.  
+I've set the code up so that you can use either a normal open or normal closed button.  
+You just need to set the button up with the defines first.  
 
 You need 2 bytes to represent all the controller buttons.  
 Depending on which controller button you want to press through the pedal, you need to clear/set the correct bit in these bytes.  
@@ -162,6 +164,10 @@ You can find the bit position for each button in the includes and here:
 #define BUTTON_CROSS 14
 #define BUTTON_SQUARE 15
 ```
+
+
+The whole code is up [on the feikController repo on github](https://github.com/pyroesp/feikController), go check it out for more info.  
+
 
 *******************
 <br/>
