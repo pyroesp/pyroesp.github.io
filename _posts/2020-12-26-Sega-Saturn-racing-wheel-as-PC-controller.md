@@ -15,10 +15,8 @@ Not having any racing games, yet, for the Sega Saturn I thought it would be cool
 
 And thus the next project was decided!  
 
-Below you can see a demo of the steering wheel working on wreckfest.  
-[![Demo Sega Saturn PC controller](https://img.youtube.com/vi/E5IDyN7Fv7s/0.jpg)](https://www.youtube.com/watch?v=E5IDyN7Fv7s)
-
-
+Below you can see a demo of the steering wheel working on wreckfest:  
+[![Demo Sega Saturn PC controller](https://img.youtube.com/vi/E5IDyN7Fv7s/0.jpg)](https://www.youtube.com/watch?v=E5IDyN7Fv7s)  
 
 You can find everything on the [Sega Saturn racing steering wheel repo on my github](https://github.com/pyroesp/Saturn-Racing-PC).  
 
@@ -29,11 +27,13 @@ You can find everything on the [Sega Saturn racing steering wheel repo on my git
 
 So first things first is take the controller apart.  
 ![saturn controller pcb 1](https://raw.githubusercontent.com/pyroesp/Saturn-Racing-PC/main/pics/Saturn%20Racing%20Controller%20PCB%201.jpg)  
+
 ![saturn controller pcb 2](https://raw.githubusercontent.com/pyroesp/Saturn-Racing-PC/main/pics/Saturn%20Racing%20Controller%20PCB%202.jpg)  
 
 There's a couple wires for the buttons going to the PCB.  
 The interesting thing is how they read the position of the steering wheel. It looks like an encoder.  
 ![saturn controller IR](https://raw.githubusercontent.com/pyroesp/Saturn-Racing-PC/main/pics/Saturn%20Racing%20Controller%20encoder%201.jpg)  
+
 ![saturn controller encoder](https://raw.githubusercontent.com/pyroesp/Saturn-Racing-PC/main/pics/Saturn%20Racing%20Controller%20encoder%202.jpg)  
 
 The board has a two IR receivers/transmitters that look through the little holes of the steering wheel.  
@@ -107,7 +107,9 @@ Here's a schematic that shows how it's all connected:
 And here are a few pictures of the hardware:  
 
 ![arduino pro micro plug](https://raw.githubusercontent.com/pyroesp/Saturn-Racing-PC/main/pics/Arduino%20Pro%20Micro%20cable.jpg)  
+
 ![reversing 1](https://raw.githubusercontent.com/pyroesp/Saturn-Racing-PC/main/pics/Saturn%20Racing%20Controller%20new%20wiring%202.jpg)  
+
 ![db9 plug 2](https://raw.githubusercontent.com/pyroesp/Saturn-Racing-PC/main/pics/Saturn%20Racing%20Controller%20new%20wiring%201.jpg)  
 
 I used DB9 connectors because that's what I had on hand, but I'd love to have a fancy round connector.  
@@ -182,7 +184,6 @@ The main loop can be split into two parts:
 * Setting the USB data of the joystick structure.  
 
 ```C
-
 void loop() {
   controllerRead(&controller); // Read controller status
   j.setXAxis(controller.x); // Set USB joystick X position
