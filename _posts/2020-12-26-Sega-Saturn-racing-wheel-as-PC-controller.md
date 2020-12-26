@@ -180,6 +180,7 @@ And initialize it in the ```setup()``` function of the arduino.
 The main loop can be split into two parts:  
 * Reading controller data with ```controllerRead(&controller)```  
 * Setting the USB data of the joystick structure.  
+
 ```C
 
 void loop() {
