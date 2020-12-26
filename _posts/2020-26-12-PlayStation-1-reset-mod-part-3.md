@@ -53,7 +53,7 @@ The output of the 555 goes to a NPN trasistor which will pull the reset of the P
 
 Below is my test PCB which I've succesfully tested on my PlayStation.  
 
-![pulse extender pcb]({{ "https://raw.githubusercontent.com/pyroesp/PlayStation-1-Reset-Mod/master/pictures/pulse%20extender/pulse%20extender.PNG" }})  
+![pulse extender pcb]({{ "https://raw.githubusercontent.com/pyroesp/PlayStation-1-Reset-Mod/master/pictures/pulse%20extender/pulse%20extender%20pcb.jpg" }})  
 
 Obviously you can make it as small and compact as you want, this was just for testing the circuit.  
 The below oscilloscope image shows the small pulse from the reset mod, in blue, and the long pulse from the 555, in yellow.
