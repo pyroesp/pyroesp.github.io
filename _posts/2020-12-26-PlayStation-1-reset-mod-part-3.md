@@ -17,6 +17,7 @@ And so I did.
 
 ************************
 <br/>
+
 ### New firmware
 
 Because the xStation expects a reset of 2s I decided to add a new button combination just for that.  
@@ -27,6 +28,7 @@ The other combinations still work like before.
 
 ************************
 <br/>
+
 ### Updating
 
 The reset mod has pads on the back of the PCB were you can connect a programmer for ICSP.  
@@ -35,10 +37,11 @@ I recommend you disconnect the 3.5V from the PlayStation as there is nothing to 
 
 Once connected either compile the program or use the hex file in the release to flash the reset mod.  
 
-If you don't have a programmer then don't panic, your reset mod can support the xStation too with an extra bit of circuit.
+If you don't have a programmer then don't panic, your reset mod can support the xStation too with an extra bit of circuit.  
 
 ************************
 <br/>
+
 ### No programmer?
 
 I get that not everyone has a PIC programmer to upgrade the firmware from v1.1 to v1.2.  
@@ -65,6 +68,7 @@ Note2: Any other pulse extender would work here. This is just a quick no microco
 
 ************************
 <br/>
+
 ### Thanks to
 
 * [ArcadeTV](https://twitter.com/arcadetv/status/1340730293402169347) for the request.  

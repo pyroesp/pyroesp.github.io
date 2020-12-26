@@ -26,9 +26,9 @@ This fake controller just has one button, the pedal, and it's set to the 'X' but
 It uses the same 16F18325 PIC microcontroller as the PlayStation reset mod.  
 The PCB is pretty much identical to it, except for a few layout changes and extra pads for the button input.  
 
-![pedal pcb-front](https://img.youtube.com/vi/5PXXQ49MqOc/0.jpg)  
-![pedal pcb-back](https://img.youtube.com/vi/5PXXQ49MqOc/0.jpg)  
-![pedal schematic](https://img.youtube.com/vi/5PXXQ49MqOc/0.jpg)  
+![pedal pcb-front](https://raw.githubusercontent.com/pyroesp/feikController/master/pics/pcb-front.PNG)  
+![pedal pcb-back](https://raw.githubusercontent.com/pyroesp/feikController/master/pics/pcb-back.PNG)  
+![pedal schematic](https://raw.githubusercontent.com/pyroesp/feikController/master/pics/schematic.PNG)  
 
 \*Note that I haven't actually tested the PCB. I've used a leftover reset mod PCB.  
 
@@ -142,7 +142,7 @@ You need 2 bytes to represent all the controller buttons.
 Depending on which controller button you want to press through the pedal, you need to clear/set the correct bit in these bytes.  
 That's why there is a check to see if ```PEDAL_BUTTON``` is higher than 7.  
 
-The corresponding can be found in the includes and here:
+You can find the bit position for each button in the includes and here:
 ```C
 /* Controller Buttons */
 #define BUTTON_SELECT 0
