@@ -2,11 +2,11 @@
 layout: post
 title:  "Game Boy Oscilloscope"
 date:   2019-03-23 06:00:00 +0200
-categories: [electronics, PCB design, KiCad]
+categories: [electronics, PCB design, KiCad, Game Boy, Oscilloscope]
 ---
 
-In the November magazine of Elektor 2000, there's an article from Steve Willis who made a cartridge for the Game Boy named GBDSO.  
-This cartridge converted the Game Boy into a 2 channel oscilloscope.  
+In the October/November magazine of Elektor 2000, there was an article from Steve Willis who made a cartridge for the Game Boy named GBDSO.  
+This cartridge made the Game Boy into a 2 channel oscilloscope.  
 
 These are it's key features :
 - Dual trace display

@@ -2,12 +2,12 @@
 layout: post
 title:  "Game Boy Oscilloscope, part 2"
 date:   2019-04-24 05:00:00 +0200
-categories: [electronics, PCB design, KiCad]
+categories: [electronics, PCB design, KiCad, Game Boy, Oscilloscope]
 ---
 
-*Recap:* 
-In the November magazine of Elektor 2000, there's an article from Steve Willis who made a cartridge for the Game Boy named GBDSO.  
-This cartridge converted the Game Boy into a 2 channel oscilloscope.  
+*Recap:*  
+In the October/November magazine of Elektor 2000, there was an article from Steve Willis who made a cartridge for the Game Boy named GBDSO.  
+This cartridge made the Game Boy into a 2 channel oscilloscope.   
 
 These are it's key features :
 - Dual trace display
@@ -45,15 +45,16 @@ I tried to read the EPROM with an Arduino, but something was wrong as the bin fi
 
 ### PCB v1 arrives  
 
-Oh, how I loathe customs. 1,5 week after the PCB was supposed to arrive I get a letter in the mail from our wonderful Belgian customs telling me I need to provide proof of purchase for the package.  
-I ordered a few extra things from JLCPCB this time, because I thought the PCB was done:
-- Color red
-- Gold plated
+Oh, how I loathe customs. 1,5 weeks after the PCB was supposed to arrive I get a letter in the mail from our wonderful Belgian customs telling me I need to provide proof of purchase for the package.  
+I ordered a few extra things from JLCPCB this time, such as:
+- Red PCB  
+- Gold plated  
 - ...  
 
-Total price comes around to 30$. If you buy something that's 22€ or more then customs can check your packages and you'll be charged an import tax...
+Total price comes around to 30$. If you buy something that's 22€ or more then customs can check your packages and you'll be charged import tax and handling fees...
 
-Anyways, once I proved the GBDSO PCB wasn't a bomb, I got the board in the mail another 1,5 week later. Got to love our postal services.  
+Anyways, once I proved the GBDSO PCB wasn't a bomb and payed their ransom, I got the board in the mail another 1,5 week later.  
+You've got to love our postal services.  
 
 ***************************  
 <br/> 
@@ -91,8 +92,7 @@ As you can see, the pins are bent inwards and soldered to the normal SOIC16 foot
 Everything was soldered onto the board, except for the 74HC138 and the MAX114CAG.  
 Where did I put those? I can't find them anywhere.  
 I checked my digikey BOM list online and they weren't in there!  
-I had to order them from another supplier as digikey charges 18€ for shipping less than 50€.  
-That seemed like a lot for two ICs.  
+Time to order some ICs again...  
 
 Once I got them I soldered the 74HC138 without issue, but then I messed up again.  
 The ADC is in a wide TSSOP24 package and I used a normal TSSOP24 footprint.
@@ -109,7 +109,7 @@ Again, I had to bend the pins inwards to make it fit the footprint. Soldering th
 ### Assembly done
 
 The board is done. I found a 3$ delivered Game Boy game and used it's shell for the GBDSO.  
-I was a bit rough cutting the shell, I should have used the dremel for this.
+I was a bit rough cutting the shell, should have used the dremel for this.
 
 ![Assembly 8]({{ "/assets/2019-04-24-Game-Boy-Oscilloscope-part-2/assembly (8).jpeg" }})  
 
@@ -159,10 +159,3 @@ After all this troubleshooting was done I checked short between power and GND, a
 <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/ue8mhNeEI1Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>  
 
 As cool as this is, I wasn't able to get any waveform on either channels so I'll have to troubleshoot some more.  
-
-**********************************
-<br/>
-
-### Troubleshooting, part 2
-
-TODO
