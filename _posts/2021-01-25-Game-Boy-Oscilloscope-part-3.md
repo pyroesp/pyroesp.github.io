@@ -98,7 +98,7 @@ I haven't tried, but if I were to bend the pins back I'm sure they would just br
 
 Anyways, once everything was soldered I did a visual inspection and a short circuit inspection.  
 
-<img src="https://github.com/pyroesp/GBDSO/blob/master/pictures/pcb-v2-assembled.jpeg" />
+<img src="https://github.com/pyroesp/GBDSO/raw/master/pictures/pcb-v2-assembled.jpeg" />
 
 Everything looked like it was going to work, so I put it back in the cartridge and plugged it into my Game Boy.  
 I was greeted with the oh so familiar Nintendo ping sound and then the GBDSO menu.  
@@ -109,7 +109,7 @@ Here's a picture of me measuring the same square wave on channel 1 and channel 2
 
 <img src="https://github.com/pyroesp/GBDSO/raw/master/pictures/channel_a.jpg" />  
 
-<img src="https://github.com/pyroesp/GBDSO/blob/master/pictures/channel_b.jpg" />  
+<img src="https://github.com/pyroesp/GBDSO/raw/master/pictures/channel_b.jpg" />  
 
 I'm so glad it's finally working. I probably could have gotten it to work in 2019 if I had percevered a bit more, but oh well...  
 
